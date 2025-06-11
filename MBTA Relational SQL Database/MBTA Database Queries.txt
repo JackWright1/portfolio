@@ -1,0 +1,60 @@
+1. This query returns all trips taken on the red line
+SQL code: SELECT * FROM Trips WHERE route="Red line";
+
+2. This query returns all trips taken on the blue line or the 32 bus
+SQL code: SELECT * FROM Trips WHERE route="BLUE line" OR route=32;
+
+3. This query returns trips taken with the purpose of commuting to work that were not on time
+SQL code: SELECT * FROM Trips WHERE purpose="work" AND on_time="No";
+
+4. This query returns the tripids and the on_time status for trips taken during snow or sunny weather
+SQL code: SELECT tripid, weather, on_time FROM Trips WHERE weather="Sunny" OR weather="Snow";
+
+5. This query returns the route, purpose, and direction for trips taken from central station
+SQL code: SELECT route, purpose, direction FROM Trips WHERE station="Central";
+
+6. This query returns a count of trips taken for social purposes and groups them by mode
+SQL code: SELECT COUNT(mode) AS Numtrips, mode FROM Trips WHERE purpose="social" GROUP BY mode;
+
+7. This query returns a count of the trips that were on time and groups them by route
+SQL code: SELECT COUNT(on_time) AS Ontimetrips, route FROM Trips WHERE on_time="Yes" GROUP BY route;
+
+8. This query returns the names of all riders who own a car and have taken a trip
+SQL code: SELECT name FROM Riders WHERE own_car="Yes" AND EXISTS  (SELECT * FROM Trips WHERE Riders.rid=Trips.rid);
+
+9. This query returns the names of all riders who do not live in Beacon Hill
+SQL code: SELECT name FROM Riders WHERE NOT neighborhood="Beacon Hill";
+
+10. This query returns all riders with an income above 90000 and lists their income, job type, rid, and neighborhood
+SQL code: SELECT rid, income, neighborhood, job_type FROM Riders WHERE income>90000;
+
+11. This query returns all riders who do not own cars and lists their names and income
+SQL code: SELECT name, income FROM Riders WHERE own_car="No";
+
+12. This query returns all route ids with an average daily ridership above 10000
+SQL code: SELECT routeid, avg_daily_ridership FROM Transportation_routes WHERE avg_daily_ridership>10000;
+
+13. This query returns all routes with a last renovation in 2024
+SQL code: SELECT * FROM Transportation_routes WHERE last_renovation=2024;
+
+14. This query returns a count of trips taken that were not on time where there was construction on the route
+SQL code: SELECT COUNT(*) AS NumDelays FROM Trips WHERE on_time="No" AND EXISTS (SELECT * FROM Transportation_routes WHERE current_construction="Yes" AND Transportation_routes.routeid=Trips.routeid);
+
+15. This query returns all bus routes with an average daily ridership below 5000
+SQL code: SELECT * FROM Transportation_routes WHERE mode="Bus" AND avg_daily_ridership<5000;
+
+16. This query returns all trips taken by a rider who lives in Downtown
+SQL code: SELECT * FROM Trips WHERE EXISTS (SELECT * FROM Riders WHERE neighborhood="Downtown" AND Trips.rid=Riders.rid);
+
+17. This query returns all trips taken by a rider who lives in Downtown
+SQL code: SELECT * FROM Trips WHERE EXISTS (SELECT * FROM Riders WHERE neighborhood="Downtown" AND Trips.rid=Riders.rid);
+
+18. This query returns the counts for work trips going inbound
+SQL code: SELECT COUNT(purpose) FROM Trips WHERE purpose="Work" AND direction="Inbound";
+
+19. This query returns the most used routes going in descending order
+SQL code: SELECT COUNT(route) AS Frequency, mode, route FROM Trips GROUP BY mode, route ORDER BY Frequency DESC;
+
+20. This query returns the counts of the most used stations in descending order
+SQL code: SELECT COUNT(station) AS MostUsedStation, station FROM Trips GROUP BY station ORDER BY MostUsedStation DESC;
+

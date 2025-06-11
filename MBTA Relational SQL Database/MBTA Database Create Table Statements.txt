@@ -1,0 +1,36 @@
+CREATE TABLE Riders (
+rid INT,
+name varchar(20),
+neighborhood varchar(30),
+income INT,
+own_car varchar(3),
+job_type varchar(12),
+PRIMARY KEY (rid)
+);
+
+CREATE TABLE Transportation_routes (
+routeid INT,
+mode varchar(10),
+route varchar(18),
+current_construction varchar(5),
+last_renovation INT,
+avg_daily_ridership INT,
+PRIMARY KEY(routeid)
+);
+
+CREATE TABLE Trips (
+tripid INT,
+rid INT,
+routeid INT,
+route varchar(18),
+mode varchar(10),
+direction varchar(10),
+on_time varchar(5),
+fare FLOAT,
+purpose varchar(12),
+station varchar(30),
+weather varchar(15),
+FOREIGN KEY (routeid) REFERENCES Transportation_routes(routeid),
+FOREIGN KEY (rid) REFERENCES Riders(rid),
+PRIMARY KEY (tripid)
+);
