@@ -5,7 +5,7 @@
 ## Technical Skills: SQL, R, Tableau, PowerBI, Python, Machine Learning
 
 ## Master of Science in Business Analytics (Expected Graduation August 2025)
-## Bachelor of Arts in Business Economics (May 2024)
+## Bachelor of Arts in Business Economics Cum Laude (May 2024)
 
 ### Projects:
 #### Consulting Project for Providence Athletics
@@ -18,12 +18,12 @@
 - blablabla
 - bla
 
-#### Exploratory Data Analysis of Housing Cost Burden data in California
+#### Exploratory Data Analysis of Housing Cost Burden in California
 -bla
 -bla
 -bla
 
-#### Tableau Dashboard
+#### Tableau Dashboard of Fulham's Premier League Seasons
 - bla
 - bla
 - bla
