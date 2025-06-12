@@ -30,7 +30,7 @@
 - Created interactive Power BI visualizations to present advanced analysis to non-technical audiences
 
 #### Tableau Dashboard of Fulham's Premier League Seasons
-- bla
+- Created an interactive Tableau dashboard used to aid analysis of their Premier League seasons
 - bla
 - bla
 
