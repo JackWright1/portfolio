@@ -14,9 +14,9 @@
 - blabla
 
 #### MBTA Relational Database using SQL
-- blablabla
-- blablabla
-- bla
+- Designed and wrote SQL code to create a relational database using MBTA data and fictional data
+- Wrote complex queries using "Joins", "Not Exists", "Group By", and subqueries to ensure the database functioned properly
+- Examined data and rewrote database code to maximize efficiency
 
 #### Exploratory Data Analysis of Housing Cost Burden in California
 - Cleaned demographic and housing cost data from 2006-2010 in California
