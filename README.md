@@ -13,6 +13,11 @@
 - blabla
 - blabla
 
+#### Military Hiring Predictive Analysis
+- blablabla
+- blabla
+- blabla
+
 #### MBTA Relational Database using SQL
 - Designed and wrote SQL code to create a relational database using MBTA data and fictional data
 - Wrote complex queries using "Joins", "Not Exists", "Group By", and subqueries to ensure the database functioned properly
