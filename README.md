@@ -19,9 +19,10 @@
 - bla
 
 #### Exploratory Data Analysis of Housing Cost Burden in California
--bla
--bla
--bla
+- Cleaned demographic and housing cost data from 2006-2010 in California
+- Examined which counties and demographic groups experienced the worst housing cost burden
+- Wrote a final report detailing my analysis and findings
+- Created interactive Power BI visualizations to present advanced analysis to non-technical audiences
 
 #### Tableau Dashboard of Fulham's Premier League Seasons
 - bla
