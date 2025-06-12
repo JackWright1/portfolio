@@ -2,7 +2,7 @@
 
 # Business Analyst
 
-## Technical Skills: SQL, R, Tableau, PowerBI, Python, Machine Learning
+## Technical Skills: SQL, R, Tableau, PowerBI, Python, Excel, Machine Learning
 
 ## Master of Science in Business Analytics (Expected Graduation August 2025)
 ## Bachelor of Arts in Business Economics Cum Laude (May 2024)
