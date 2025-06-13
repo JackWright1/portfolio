@@ -14,9 +14,9 @@
 - blabla
 
 #### Military Hiring Predictive Analysis
-- blablabla
-- blabla
-- blabla
+- Cleaned and merged three large datasets to analyze demographic, military, and hiring variables
+- Clustered demographic and military variables to reveal patterns in the dataset and group the people being analyzed for data visualizations in Tableau
+- Used predictive regression modeling to predict post-military hires based on available data
 
 #### MBTA Relational Database using SQL
 - Designed and wrote SQL code to create a relational database using MBTA data and fictional data
