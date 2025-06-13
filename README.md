@@ -8,12 +8,12 @@
 ## Bachelor of Arts in Business Economics Cum Laude (May 2024)
 
 ### Projects:
-#### Consulting Project for Providence Athletics
+#### Consulting Group Project for Providence Athletics
 - blablabla
 - blabla
 - blabla
 
-#### Military Hiring Predictive Analysis
+#### Consulting Military Hiring Predictive Analysis
 - Cleaned and merged three large datasets to analyze demographic, military, and hiring variables
 - Clustered demographic and military variables to reveal patterns in the dataset and group the people being analyzed for data visualizations in Tableau
 - Used predictive regression modeling to predict post-military hires based on available data
