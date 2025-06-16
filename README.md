@@ -30,9 +30,9 @@
 - Created interactive Power BI visualizations to present advanced analysis to non-technical audiences
 
 #### Tableau Dashboard of Fulham's Premier League Seasons
-- Created an interactive Tableau dashboard used to aid analysis of their Premier League seasons
-- bla
-- bla
+- Created a Tableau dashboard used to aid analysis of Fulham's Premier League seasons
+- Used calculated fields to aid multi-year analysis
+- Compiled league points and goals data to determine Fulham's best and worst years
 
 #### Housing Price Analysis using Machine Learning Modeling Techniques
 - bla
