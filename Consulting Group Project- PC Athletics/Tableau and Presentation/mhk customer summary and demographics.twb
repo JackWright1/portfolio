@@ -1,0 +1,2565 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0807.0327                               -->
+<workbook original-version='18.1' source-build='2024.2.2 (20242.24.0807.0327)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <SavingAnalyticObjects />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='mhk_customer_summary.csv+ (Multiple Connections)' inline='true' name='federated.02f2xhx0ztkim71dwvhld0oxxh8g' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mhk_customer_summary' name='textscan.11g3b0z0logfts1dntdmc0yw2sy5'>
+            <connection class='textscan' directory='C:/Users/jwright4/Desktop/Summer Consulting Project/Group Project stuff/data/cleaned sports csvs' filename='mhk_customer_summary.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='combined providence append and fan factors' name='textscan.1tp8dab1dw3wmn1azslo91i0o8y2'>
+            <connection class='textscan' directory='C:/Users/jwright4/Desktop/Summer Consulting Project/Group Project stuff/data' filename='combined providence append and fan factors.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[mhk_customer_summary.csv].[GRMID]' />
+              <expression op='[combined providence append and fan factors.csv].[GRMCONTACTID]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.11g3b0z0logfts1dntdmc0yw2sy5' name='mhk_customer_summary.csv' table='[mhk_customer_summary#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='GRMID' ordinal='0' />
+              <column datatype='integer' name='purchase_count' ordinal='1' />
+              <column datatype='integer' name='attendance_count' ordinal='2' />
+              <column datatype='integer' name='purchase_group' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1tp8dab1dw3wmn1azslo91i0o8y2' name='combined providence append and fan factors.csv' table='[combined providence append and fan factors#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Fan Journey Stage' ordinal='0' />
+              <column datatype='string' name='Ticketing Stm Tenure' ordinal='1' />
+              <column datatype='integer' name='Total Lifetime Ticket Value' ordinal='2' />
+              <column datatype='real' name='Email Email Click Pct' ordinal='3' />
+              <column datatype='real' name='Email Email Open Pct' ordinal='4' />
+              <column datatype='string' name='Ticketing Resold Net Gain' ordinal='5' />
+              <column datatype='string' name='Alumni' ordinal='6' />
+              <column datatype='string' name='GRMCONTACTID' ordinal='7' />
+              <column datatype='string' name='Fanbase profile' ordinal='8' />
+              <column datatype='integer' name='RFM Score 041524' ordinal='9' />
+              <column datatype='real' name='Fanatics Lifetime Value' ordinal='10' />
+              <column datatype='integer' name='PTS Lifetime Value' ordinal='11' />
+              <column datatype='integer' name='Vivid Lifetime' ordinal='12' />
+              <column datatype='real' name='Priority Points 040124' ordinal='13' />
+              <column datatype='boolean' name='ACTIVITY24MO_DONATION_BY_MAIL' ordinal='14' />
+              <column datatype='boolean' name='ACTIVITY24MO_DONOR_OR_CONTRIBUTOR' ordinal='15' />
+              <column datatype='string' name='ATTENDANCE_PROPENSITY_MLB' ordinal='16' />
+              <column datatype='string' name='ATTENDANCE_PROPENSITY_NBA' ordinal='17' />
+              <column datatype='string' name='ATTENDANCE_PROPENSITY_NCAA' ordinal='18' />
+              <column datatype='string' name='ATTENDANCE_PROPENSITY_SPORTS' ordinal='19' />
+              <column datatype='string' name='CENSUS_MEDIAN_HOME_VALUE' ordinal='20' />
+              <column datatype='string' name='CENSUS_MEDIAN_HOUSEHOLD_INCOME' ordinal='21' />
+              <column datatype='string' name='DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD' ordinal='22' />
+              <column datatype='string' name='DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD_IN_RANGES' ordinal='23' />
+              <column datatype='string' name='DEMOGRAPHIC_AGE_OF_INDIVIDUAL' ordinal='24' />
+              <column datatype='string' name='DEMOGRAPHIC_EDUCATION_LEVEL' ordinal='25' />
+              <column datatype='string' name='DEMOGRAPHIC_GENDER' ordinal='26' />
+              <column datatype='string' name='DEMOGRAPHIC_INDIVIDUAL_AGE' ordinal='27' />
+              <column datatype='boolean' name='DONOR_ANIMAL_WELFARE' ordinal='28' />
+              <column datatype='boolean' name='DONOR_ARTS_OR_CULTURE' ordinal='29' />
+              <column datatype='boolean' name='DONOR_CHARITABLE_CAUSE' ordinal='30' />
+              <column datatype='boolean' name='DONOR_CHILDRENS_CAUSE' ordinal='31' />
+              <column datatype='boolean' name='DONOR_CONSERVATIVE_POLITICS' ordinal='32' />
+              <column datatype='boolean' name='DONOR_ENVIRONMENT_AND_WILDLIFE' ordinal='33' />
+              <column datatype='boolean' name='DONOR_HEALTH_CAUSE' ordinal='34' />
+              <column datatype='boolean' name='DONOR_INTERNATIONAL_AID' ordinal='35' />
+              <column datatype='boolean' name='DONOR_LIBERAL_POLITICS' ordinal='36' />
+              <column datatype='boolean' name='DONOR_OTHER_CAUSE' ordinal='37' />
+              <column datatype='boolean' name='DONOR_POLITICAL_CAUSE' ordinal='38' />
+              <column datatype='boolean' name='DONOR_RELIGIOUS_CAUSE' ordinal='39' />
+              <column datatype='boolean' name='DONOR_VETERANS_CAUSE' ordinal='40' />
+              <column datatype='string' name='HEAD_OF_HOUSEHOLD_EDUCATION_LEVEL' ordinal='41' />
+              <column datatype='string' name='HEAD_OF_HOUSEHOLD_OCCUPATION' ordinal='42' />
+              <column datatype='string' name='HH_BUSINESS_OWNER' ordinal='43' />
+              <column datatype='string' name='HH_CHILDREN_PRESENT' ordinal='44' />
+              <column datatype='boolean' name='HH_CHILD_ELEMENTARY_AGE_5_TO_10' ordinal='45' />
+              <column datatype='boolean' name='HH_CHILD_HIGH_SCHOOL_AGE_14_TO_17' ordinal='46' />
+              <column datatype='boolean' name='HH_CHILD_IN_HOUSEHOLD_NEAR_HIGH_SCHOOL_GRADUATION' ordinal='47' />
+              <column datatype='boolean' name='HH_CHILD_MIDDLE_SCHOOL_AGE_11_TO_13' ordinal='48' />
+              <column datatype='boolean' name='HH_ENVIRONMENTALLY_FRIENDLY' ordinal='49' />
+              <column datatype='boolean' name='HH_HEAVY_TRANSACTING_INDICATOR' ordinal='50' />
+              <column datatype='string' name='HH_MARITAL_STATUS' ordinal='51' />
+              <column datatype='string' name='HH_NEW_PARENT_INDICATORS_FULL' ordinal='52' />
+              <column datatype='string' name='HH_NUMBER_OF_ADULTS_PRESENT' ordinal='53' />
+              <column datatype='string' name='HH_NUMBER_OF_CHILDREN' ordinal='54' />
+              <column datatype='string' name='HH_NUMBER_OF_GENERATIONS' ordinal='55' />
+              <column datatype='boolean' name='HH_SENIOR_ADULT' ordinal='56' />
+              <column datatype='boolean' name='HH_SINGLE_PARENT' ordinal='57' />
+              <column datatype='boolean' name='HH_SMALL_HOME_OFFICE' ordinal='58' />
+              <column datatype='boolean' name='HH_VETERAN' ordinal='59' />
+              <column datatype='boolean' name='HH_WORKING_WOMAN' ordinal='60' />
+              <column datatype='string' name='HH_YOUNG_ADULT' ordinal='61' />
+              <column datatype='string' name='OCCUPATION_GENERAL' ordinal='62' />
+              <column datatype='string' name='PROPERTY_HOME_OWNER_OR_RENTER' ordinal='63' />
+              <column datatype='string' name='PROPERTY_LENGTH_OF_RESIDENCE' ordinal='64' />
+              <column datatype='string' name='TRAVEL_PROFESSIONAL_SPORT_EVENT' ordinal='65' />
+              <column datatype='string' name='TRAVEL_WINTER_SPORTS' ordinal='66' />
+              <column datatype='string' name='WEALTH_HOUSEHOLD_INCOME' ordinal='67' />
+              <column datatype='integer' name='WEALTH_HOUSEHOLD_INCOME_SINGLE_NUM' ordinal='68' />
+              <column datatype='integer' name='WEALTH_NET_WORTH_SINGLE_NUM' ordinal='69' />
+              <column datatype='string' name='WEALTH_NET_WORTH' ordinal='70' />
+              <column datatype='integer' name='ESTIMATED_CAPACITY' ordinal='71' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[mhk_customer_summary.csv].[GRMID]' />
+              <expression op='[combined providence append and fan factors.csv].[GRMCONTACTID]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.11g3b0z0logfts1dntdmc0yw2sy5' name='mhk_customer_summary.csv' table='[mhk_customer_summary#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='GRMID' ordinal='0' />
+              <column datatype='integer' name='purchase_count' ordinal='1' />
+              <column datatype='integer' name='attendance_count' ordinal='2' />
+              <column datatype='integer' name='purchase_group' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1tp8dab1dw3wmn1azslo91i0o8y2' name='combined providence append and fan factors.csv' table='[combined providence append and fan factors#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Fan Journey Stage' ordinal='0' />
+              <column datatype='string' name='Ticketing Stm Tenure' ordinal='1' />
+              <column datatype='integer' name='Total Lifetime Ticket Value' ordinal='2' />
+              <column datatype='real' name='Email Email Click Pct' ordinal='3' />
+              <column datatype='real' name='Email Email Open Pct' ordinal='4' />
+              <column datatype='string' name='Ticketing Resold Net Gain' ordinal='5' />
+              <column datatype='string' name='Alumni' ordinal='6' />
+              <column datatype='string' name='GRMCONTACTID' ordinal='7' />
+              <column datatype='string' name='Fanbase profile' ordinal='8' />
+              <column datatype='integer' name='RFM Score 041524' ordinal='9' />
+              <column datatype='real' name='Fanatics Lifetime Value' ordinal='10' />
+              <column datatype='integer' name='PTS Lifetime Value' ordinal='11' />
+              <column datatype='integer' name='Vivid Lifetime' ordinal='12' />
+              <column datatype='real' name='Priority Points 040124' ordinal='13' />
+              <column datatype='boolean' name='ACTIVITY24MO_DONATION_BY_MAIL' ordinal='14' />
+              <column datatype='boolean' name='ACTIVITY24MO_DONOR_OR_CONTRIBUTOR' ordinal='15' />
+              <column datatype='string' name='ATTENDANCE_PROPENSITY_MLB' ordinal='16' />
+              <column datatype='string' name='ATTENDANCE_PROPENSITY_NBA' ordinal='17' />
+              <column datatype='string' name='ATTENDANCE_PROPENSITY_NCAA' ordinal='18' />
+              <column datatype='string' name='ATTENDANCE_PROPENSITY_SPORTS' ordinal='19' />
+              <column datatype='string' name='CENSUS_MEDIAN_HOME_VALUE' ordinal='20' />
+              <column datatype='string' name='CENSUS_MEDIAN_HOUSEHOLD_INCOME' ordinal='21' />
+              <column datatype='string' name='DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD' ordinal='22' />
+              <column datatype='string' name='DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD_IN_RANGES' ordinal='23' />
+              <column datatype='string' name='DEMOGRAPHIC_AGE_OF_INDIVIDUAL' ordinal='24' />
+              <column datatype='string' name='DEMOGRAPHIC_EDUCATION_LEVEL' ordinal='25' />
+              <column datatype='string' name='DEMOGRAPHIC_GENDER' ordinal='26' />
+              <column datatype='string' name='DEMOGRAPHIC_INDIVIDUAL_AGE' ordinal='27' />
+              <column datatype='boolean' name='DONOR_ANIMAL_WELFARE' ordinal='28' />
+              <column datatype='boolean' name='DONOR_ARTS_OR_CULTURE' ordinal='29' />
+              <column datatype='boolean' name='DONOR_CHARITABLE_CAUSE' ordinal='30' />
+              <column datatype='boolean' name='DONOR_CHILDRENS_CAUSE' ordinal='31' />
+              <column datatype='boolean' name='DONOR_CONSERVATIVE_POLITICS' ordinal='32' />
+              <column datatype='boolean' name='DONOR_ENVIRONMENT_AND_WILDLIFE' ordinal='33' />
+              <column datatype='boolean' name='DONOR_HEALTH_CAUSE' ordinal='34' />
+              <column datatype='boolean' name='DONOR_INTERNATIONAL_AID' ordinal='35' />
+              <column datatype='boolean' name='DONOR_LIBERAL_POLITICS' ordinal='36' />
+              <column datatype='boolean' name='DONOR_OTHER_CAUSE' ordinal='37' />
+              <column datatype='boolean' name='DONOR_POLITICAL_CAUSE' ordinal='38' />
+              <column datatype='boolean' name='DONOR_RELIGIOUS_CAUSE' ordinal='39' />
+              <column datatype='boolean' name='DONOR_VETERANS_CAUSE' ordinal='40' />
+              <column datatype='string' name='HEAD_OF_HOUSEHOLD_EDUCATION_LEVEL' ordinal='41' />
+              <column datatype='string' name='HEAD_OF_HOUSEHOLD_OCCUPATION' ordinal='42' />
+              <column datatype='string' name='HH_BUSINESS_OWNER' ordinal='43' />
+              <column datatype='string' name='HH_CHILDREN_PRESENT' ordinal='44' />
+              <column datatype='boolean' name='HH_CHILD_ELEMENTARY_AGE_5_TO_10' ordinal='45' />
+              <column datatype='boolean' name='HH_CHILD_HIGH_SCHOOL_AGE_14_TO_17' ordinal='46' />
+              <column datatype='boolean' name='HH_CHILD_IN_HOUSEHOLD_NEAR_HIGH_SCHOOL_GRADUATION' ordinal='47' />
+              <column datatype='boolean' name='HH_CHILD_MIDDLE_SCHOOL_AGE_11_TO_13' ordinal='48' />
+              <column datatype='boolean' name='HH_ENVIRONMENTALLY_FRIENDLY' ordinal='49' />
+              <column datatype='boolean' name='HH_HEAVY_TRANSACTING_INDICATOR' ordinal='50' />
+              <column datatype='string' name='HH_MARITAL_STATUS' ordinal='51' />
+              <column datatype='string' name='HH_NEW_PARENT_INDICATORS_FULL' ordinal='52' />
+              <column datatype='string' name='HH_NUMBER_OF_ADULTS_PRESENT' ordinal='53' />
+              <column datatype='string' name='HH_NUMBER_OF_CHILDREN' ordinal='54' />
+              <column datatype='string' name='HH_NUMBER_OF_GENERATIONS' ordinal='55' />
+              <column datatype='boolean' name='HH_SENIOR_ADULT' ordinal='56' />
+              <column datatype='boolean' name='HH_SINGLE_PARENT' ordinal='57' />
+              <column datatype='boolean' name='HH_SMALL_HOME_OFFICE' ordinal='58' />
+              <column datatype='boolean' name='HH_VETERAN' ordinal='59' />
+              <column datatype='boolean' name='HH_WORKING_WOMAN' ordinal='60' />
+              <column datatype='string' name='HH_YOUNG_ADULT' ordinal='61' />
+              <column datatype='string' name='OCCUPATION_GENERAL' ordinal='62' />
+              <column datatype='string' name='PROPERTY_HOME_OWNER_OR_RENTER' ordinal='63' />
+              <column datatype='string' name='PROPERTY_LENGTH_OF_RESIDENCE' ordinal='64' />
+              <column datatype='string' name='TRAVEL_PROFESSIONAL_SPORT_EVENT' ordinal='65' />
+              <column datatype='string' name='TRAVEL_WINTER_SPORTS' ordinal='66' />
+              <column datatype='string' name='WEALTH_HOUSEHOLD_INCOME' ordinal='67' />
+              <column datatype='integer' name='WEALTH_HOUSEHOLD_INCOME_SINGLE_NUM' ordinal='68' />
+              <column datatype='integer' name='WEALTH_NET_WORTH_SINGLE_NUM' ordinal='69' />
+              <column datatype='string' name='WEALTH_NET_WORTH' ordinal='70' />
+              <column datatype='integer' name='ESTIMATED_CAPACITY' ordinal='71' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mhk_customer_summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GRMID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[GRMID]</local-name>
+            <parent-name>[mhk_customer_summary.csv]</parent-name>
+            <remote-alias>GRMID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>purchase_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[purchase_count]</local-name>
+            <parent-name>[mhk_customer_summary.csv]</parent-name>
+            <remote-alias>purchase_count</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attendance_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[attendance_count]</local-name>
+            <parent-name>[mhk_customer_summary.csv]</parent-name>
+            <remote-alias>attendance_count</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>purchase_group</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[purchase_group]</local-name>
+            <parent-name>[mhk_customer_summary.csv]</parent-name>
+            <remote-alias>purchase_group</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fan Journey Stage</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Fan Journey Stage]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Fan Journey Stage</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ticketing Stm Tenure</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ticketing Stm Tenure]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Ticketing Stm Tenure</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Lifetime Ticket Value</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Lifetime Ticket Value]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Total Lifetime Ticket Value</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Email Email Click Pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Email Email Click Pct]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Email Email Click Pct</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Email Email Open Pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Email Email Open Pct]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Email Email Open Pct</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ticketing Resold Net Gain</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ticketing Resold Net Gain]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Ticketing Resold Net Gain</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Alumni</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Alumni]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Alumni</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GRMCONTACTID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[GRMCONTACTID]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>GRMCONTACTID</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fanbase profile</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Fanbase profile]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Fanbase profile</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RFM Score 041524</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[RFM Score 041524]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>RFM Score 041524</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fanatics Lifetime Value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Fanatics Lifetime Value]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Fanatics Lifetime Value</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PTS Lifetime Value</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PTS Lifetime Value]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>PTS Lifetime Value</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vivid Lifetime</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Vivid Lifetime]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Vivid Lifetime</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Priority Points 040124</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Priority Points 040124]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>Priority Points 040124</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ACTIVITY24MO_DONATION_BY_MAIL</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[ACTIVITY24MO_DONATION_BY_MAIL]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>ACTIVITY24MO_DONATION_BY_MAIL</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ACTIVITY24MO_DONOR_OR_CONTRIBUTOR</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[ACTIVITY24MO_DONOR_OR_CONTRIBUTOR]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>ACTIVITY24MO_DONOR_OR_CONTRIBUTOR</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATTENDANCE_PROPENSITY_MLB</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATTENDANCE_PROPENSITY_MLB]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>ATTENDANCE_PROPENSITY_MLB</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATTENDANCE_PROPENSITY_NBA</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATTENDANCE_PROPENSITY_NBA]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>ATTENDANCE_PROPENSITY_NBA</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATTENDANCE_PROPENSITY_NCAA</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATTENDANCE_PROPENSITY_NCAA]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>ATTENDANCE_PROPENSITY_NCAA</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ATTENDANCE_PROPENSITY_SPORTS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ATTENDANCE_PROPENSITY_SPORTS]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>ATTENDANCE_PROPENSITY_SPORTS</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CENSUS_MEDIAN_HOME_VALUE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CENSUS_MEDIAN_HOME_VALUE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>CENSUS_MEDIAN_HOME_VALUE</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CENSUS_MEDIAN_HOUSEHOLD_INCOME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CENSUS_MEDIAN_HOUSEHOLD_INCOME]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>CENSUS_MEDIAN_HOUSEHOLD_INCOME</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD_IN_RANGES</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD_IN_RANGES]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD_IN_RANGES</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEMOGRAPHIC_AGE_OF_INDIVIDUAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DEMOGRAPHIC_AGE_OF_INDIVIDUAL]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DEMOGRAPHIC_AGE_OF_INDIVIDUAL</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEMOGRAPHIC_EDUCATION_LEVEL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DEMOGRAPHIC_EDUCATION_LEVEL]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DEMOGRAPHIC_EDUCATION_LEVEL</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEMOGRAPHIC_GENDER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DEMOGRAPHIC_GENDER]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DEMOGRAPHIC_GENDER</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DEMOGRAPHIC_INDIVIDUAL_AGE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DEMOGRAPHIC_INDIVIDUAL_AGE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DEMOGRAPHIC_INDIVIDUAL_AGE</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_ANIMAL_WELFARE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_ANIMAL_WELFARE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_ANIMAL_WELFARE</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_ARTS_OR_CULTURE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_ARTS_OR_CULTURE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_ARTS_OR_CULTURE</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_CHARITABLE_CAUSE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_CHARITABLE_CAUSE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_CHARITABLE_CAUSE</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_CHILDRENS_CAUSE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_CHILDRENS_CAUSE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_CHILDRENS_CAUSE</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_CONSERVATIVE_POLITICS</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_CONSERVATIVE_POLITICS]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_CONSERVATIVE_POLITICS</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_ENVIRONMENT_AND_WILDLIFE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_ENVIRONMENT_AND_WILDLIFE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_ENVIRONMENT_AND_WILDLIFE</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_HEALTH_CAUSE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_HEALTH_CAUSE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_HEALTH_CAUSE</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_INTERNATIONAL_AID</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_INTERNATIONAL_AID]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_INTERNATIONAL_AID</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_LIBERAL_POLITICS</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_LIBERAL_POLITICS]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_LIBERAL_POLITICS</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_OTHER_CAUSE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_OTHER_CAUSE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_OTHER_CAUSE</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_POLITICAL_CAUSE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_POLITICAL_CAUSE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_POLITICAL_CAUSE</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_RELIGIOUS_CAUSE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_RELIGIOUS_CAUSE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_RELIGIOUS_CAUSE</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DONOR_VETERANS_CAUSE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[DONOR_VETERANS_CAUSE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>DONOR_VETERANS_CAUSE</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HEAD_OF_HOUSEHOLD_EDUCATION_LEVEL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HEAD_OF_HOUSEHOLD_EDUCATION_LEVEL]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HEAD_OF_HOUSEHOLD_EDUCATION_LEVEL</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HEAD_OF_HOUSEHOLD_OCCUPATION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HEAD_OF_HOUSEHOLD_OCCUPATION]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HEAD_OF_HOUSEHOLD_OCCUPATION</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_BUSINESS_OWNER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HH_BUSINESS_OWNER]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_BUSINESS_OWNER</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_CHILDREN_PRESENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HH_CHILDREN_PRESENT]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_CHILDREN_PRESENT</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_CHILD_ELEMENTARY_AGE_5_TO_10</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_CHILD_ELEMENTARY_AGE_5_TO_10]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_CHILD_ELEMENTARY_AGE_5_TO_10</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_CHILD_HIGH_SCHOOL_AGE_14_TO_17</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_CHILD_HIGH_SCHOOL_AGE_14_TO_17]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_CHILD_HIGH_SCHOOL_AGE_14_TO_17</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_CHILD_IN_HOUSEHOLD_NEAR_HIGH_SCHOOL_GRADUATION</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_CHILD_IN_HOUSEHOLD_NEAR_HIGH_SCHOOL_GRADUATION]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_CHILD_IN_HOUSEHOLD_NEAR_HIGH_SCHOOL_GRADUATION</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_CHILD_MIDDLE_SCHOOL_AGE_11_TO_13</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_CHILD_MIDDLE_SCHOOL_AGE_11_TO_13]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_CHILD_MIDDLE_SCHOOL_AGE_11_TO_13</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_ENVIRONMENTALLY_FRIENDLY</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_ENVIRONMENTALLY_FRIENDLY]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_ENVIRONMENTALLY_FRIENDLY</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_HEAVY_TRANSACTING_INDICATOR</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_HEAVY_TRANSACTING_INDICATOR]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_HEAVY_TRANSACTING_INDICATOR</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_MARITAL_STATUS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HH_MARITAL_STATUS]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_MARITAL_STATUS</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_NEW_PARENT_INDICATORS_FULL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HH_NEW_PARENT_INDICATORS_FULL]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_NEW_PARENT_INDICATORS_FULL</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_NUMBER_OF_ADULTS_PRESENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HH_NUMBER_OF_ADULTS_PRESENT]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_NUMBER_OF_ADULTS_PRESENT</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_NUMBER_OF_CHILDREN</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HH_NUMBER_OF_CHILDREN]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_NUMBER_OF_CHILDREN</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_NUMBER_OF_GENERATIONS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HH_NUMBER_OF_GENERATIONS]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_NUMBER_OF_GENERATIONS</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_SENIOR_ADULT</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_SENIOR_ADULT]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_SENIOR_ADULT</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_SINGLE_PARENT</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_SINGLE_PARENT]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_SINGLE_PARENT</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_SMALL_HOME_OFFICE</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_SMALL_HOME_OFFICE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_SMALL_HOME_OFFICE</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_VETERAN</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_VETERAN]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_VETERAN</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_WORKING_WOMAN</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[HH_WORKING_WOMAN]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_WORKING_WOMAN</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HH_YOUNG_ADULT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HH_YOUNG_ADULT]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>HH_YOUNG_ADULT</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OCCUPATION_GENERAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[OCCUPATION_GENERAL]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>OCCUPATION_GENERAL</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_HOME_OWNER_OR_RENTER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROPERTY_HOME_OWNER_OR_RENTER]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>PROPERTY_HOME_OWNER_OR_RENTER</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PROPERTY_LENGTH_OF_RESIDENCE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PROPERTY_LENGTH_OF_RESIDENCE]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>PROPERTY_LENGTH_OF_RESIDENCE</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TRAVEL_PROFESSIONAL_SPORT_EVENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TRAVEL_PROFESSIONAL_SPORT_EVENT]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>TRAVEL_PROFESSIONAL_SPORT_EVENT</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TRAVEL_WINTER_SPORTS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TRAVEL_WINTER_SPORTS]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>TRAVEL_WINTER_SPORTS</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WEALTH_HOUSEHOLD_INCOME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WEALTH_HOUSEHOLD_INCOME]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>WEALTH_HOUSEHOLD_INCOME</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WEALTH_HOUSEHOLD_INCOME_SINGLE_NUM</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WEALTH_HOUSEHOLD_INCOME_SINGLE_NUM]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>WEALTH_HOUSEHOLD_INCOME_SINGLE_NUM</remote-alias>
+            <ordinal>72</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WEALTH_NET_WORTH_SINGLE_NUM</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WEALTH_NET_WORTH_SINGLE_NUM]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>WEALTH_NET_WORTH_SINGLE_NUM</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WEALTH_NET_WORTH</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WEALTH_NET_WORTH]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>WEALTH_NET_WORTH</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ESTIMATED_CAPACITY</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ESTIMATED_CAPACITY]</local-name>
+            <parent-name>[combined providence append and fan factors.csv]</parent-name>
+            <remote-alias>ESTIMATED_CAPACITY</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Activity24Mo Donation By Mail' datatype='boolean' name='[ACTIVITY24MO_DONATION_BY_MAIL]' role='dimension' type='nominal' />
+      <column caption='Activity24Mo Donor Or Contributor' datatype='boolean' name='[ACTIVITY24MO_DONOR_OR_CONTRIBUTOR]' role='dimension' type='nominal' />
+      <column caption='Attendance Propensity Mlb' datatype='string' name='[ATTENDANCE_PROPENSITY_MLB]' role='dimension' type='nominal' />
+      <column caption='Attendance Propensity Nba' datatype='string' name='[ATTENDANCE_PROPENSITY_NBA]' role='dimension' type='nominal' />
+      <column caption='Attendance Propensity Ncaa' datatype='string' name='[ATTENDANCE_PROPENSITY_NCAA]' role='dimension' type='nominal' />
+      <column caption='Attendance Propensity Sports' datatype='string' name='[ATTENDANCE_PROPENSITY_SPORTS]' role='dimension' type='nominal' />
+      <column caption='Census Median Home Value' datatype='string' name='[CENSUS_MEDIAN_HOME_VALUE]' role='dimension' type='nominal' />
+      <column caption='Census Median Household Income' datatype='string' name='[CENSUS_MEDIAN_HOUSEHOLD_INCOME]' role='dimension' type='nominal' />
+      <column caption='attendance %' datatype='real' name='[Calculation_3403313975207686144]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[attendance_count]/[purchase_count]*100' />
+      </column>
+      <column caption='Demographic Age Of Head Of Household' datatype='string' name='[DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD]' role='dimension' type='nominal' />
+      <column caption='Demographic Age Of Head Of Household In Ranges' datatype='string' name='[DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD_IN_RANGES]' role='dimension' type='nominal' />
+      <column caption='Demographic Age Of Individual' datatype='string' name='[DEMOGRAPHIC_AGE_OF_INDIVIDUAL]' role='dimension' type='nominal' />
+      <column caption='Demographic Education Level' datatype='string' name='[DEMOGRAPHIC_EDUCATION_LEVEL]' role='dimension' type='nominal' />
+      <column caption='Demographic Gender' datatype='string' name='[DEMOGRAPHIC_GENDER]' role='dimension' type='nominal' />
+      <column caption='Demographic Individual Age' datatype='string' name='[DEMOGRAPHIC_INDIVIDUAL_AGE]' role='dimension' type='nominal' />
+      <column caption='Donor Animal Welfare' datatype='boolean' name='[DONOR_ANIMAL_WELFARE]' role='dimension' type='nominal' />
+      <column caption='Donor Arts Or Culture' datatype='boolean' name='[DONOR_ARTS_OR_CULTURE]' role='dimension' type='nominal' />
+      <column caption='Donor Charitable Cause' datatype='boolean' name='[DONOR_CHARITABLE_CAUSE]' role='dimension' type='nominal' />
+      <column caption='Donor Childrens Cause' datatype='boolean' name='[DONOR_CHILDRENS_CAUSE]' role='dimension' type='nominal' />
+      <column caption='Donor Conservative Politics' datatype='boolean' name='[DONOR_CONSERVATIVE_POLITICS]' role='dimension' type='nominal' />
+      <column caption='Donor Environment And Wildlife' datatype='boolean' name='[DONOR_ENVIRONMENT_AND_WILDLIFE]' role='dimension' type='nominal' />
+      <column caption='Donor Health Cause' datatype='boolean' name='[DONOR_HEALTH_CAUSE]' role='dimension' type='nominal' />
+      <column caption='Donor International Aid' datatype='boolean' name='[DONOR_INTERNATIONAL_AID]' role='dimension' type='nominal' />
+      <column caption='Donor Liberal Politics' datatype='boolean' name='[DONOR_LIBERAL_POLITICS]' role='dimension' type='nominal' />
+      <column caption='Donor Other Cause' datatype='boolean' name='[DONOR_OTHER_CAUSE]' role='dimension' type='nominal' />
+      <column caption='Donor Political Cause' datatype='boolean' name='[DONOR_POLITICAL_CAUSE]' role='dimension' type='nominal' />
+      <column caption='Donor Religious Cause' datatype='boolean' name='[DONOR_RELIGIOUS_CAUSE]' role='dimension' type='nominal' />
+      <column caption='Donor Veterans Cause' datatype='boolean' name='[DONOR_VETERANS_CAUSE]' role='dimension' type='nominal' />
+      <column caption='Estimated Capacity' datatype='integer' name='[ESTIMATED_CAPACITY]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Fanbase profile]' role='dimension' type='nominal' />
+      <column caption='Grmcontactid' datatype='string' name='[GRMCONTACTID]' role='dimension' type='nominal' />
+      <column caption='Grmid' datatype='string' name='[GRMID]' role='dimension' type='nominal' />
+      <column caption='Head Of Household Education Level' datatype='string' name='[HEAD_OF_HOUSEHOLD_EDUCATION_LEVEL]' role='dimension' type='nominal' />
+      <column caption='Head Of Household Occupation' datatype='string' name='[HEAD_OF_HOUSEHOLD_OCCUPATION]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Self Employed - Clerical/White Collar&quot;' value='Self Employed - Clerical' />
+          <alias key='&quot;Self Employed - Professional/Technical&quot;' value='Self Employed - Professional' />
+        </aliases>
+      </column>
+      <column caption='Hh Business Owner' datatype='string' name='[HH_BUSINESS_OWNER]' role='dimension' type='nominal' />
+      <column caption='Hh Children Present' datatype='string' name='[HH_CHILDREN_PRESENT]' role='dimension' type='nominal' />
+      <column caption='Hh Child Elementary Age 5 To 10' datatype='boolean' name='[HH_CHILD_ELEMENTARY_AGE_5_TO_10]' role='dimension' type='nominal' />
+      <column caption='Hh Child High School Age 14 To 17' datatype='boolean' name='[HH_CHILD_HIGH_SCHOOL_AGE_14_TO_17]' role='dimension' type='nominal' />
+      <column caption='Hh Child In Household Near High School Graduation' datatype='boolean' name='[HH_CHILD_IN_HOUSEHOLD_NEAR_HIGH_SCHOOL_GRADUATION]' role='dimension' type='nominal' />
+      <column caption='Hh Child Middle School Age 11 To 13' datatype='boolean' name='[HH_CHILD_MIDDLE_SCHOOL_AGE_11_TO_13]' role='dimension' type='nominal' />
+      <column caption='Hh Environmentally Friendly' datatype='boolean' name='[HH_ENVIRONMENTALLY_FRIENDLY]' role='dimension' type='nominal' />
+      <column caption='Hh Heavy Transacting Indicator' datatype='boolean' name='[HH_HEAVY_TRANSACTING_INDICATOR]' role='dimension' type='nominal' />
+      <column caption='Hh Marital Status' datatype='string' name='[HH_MARITAL_STATUS]' role='dimension' type='nominal' />
+      <column caption='Hh New Parent Indicators Full' datatype='string' name='[HH_NEW_PARENT_INDICATORS_FULL]' role='dimension' type='nominal' />
+      <column caption='Hh Number Of Adults Present' datatype='string' name='[HH_NUMBER_OF_ADULTS_PRESENT]' role='dimension' type='nominal' />
+      <column caption='Hh Number Of Children' datatype='string' name='[HH_NUMBER_OF_CHILDREN]' role='dimension' type='nominal' />
+      <column caption='Hh Number Of Generations' datatype='string' name='[HH_NUMBER_OF_GENERATIONS]' role='dimension' type='nominal' />
+      <column caption='Hh Senior Adult' datatype='boolean' name='[HH_SENIOR_ADULT]' role='dimension' type='nominal' />
+      <column caption='Hh Single Parent' datatype='boolean' name='[HH_SINGLE_PARENT]' role='dimension' type='nominal' />
+      <column caption='Hh Small Home Office' datatype='boolean' name='[HH_SMALL_HOME_OFFICE]' role='dimension' type='nominal' />
+      <column caption='Hh Veteran' datatype='boolean' name='[HH_VETERAN]' role='dimension' type='nominal' />
+      <column caption='Hh Working Woman' datatype='boolean' name='[HH_WORKING_WOMAN]' role='dimension' type='nominal' />
+      <column caption='Hh Young Adult' datatype='string' name='[HH_YOUNG_ADULT]' role='dimension' type='nominal' />
+      <column caption='Occupation General' datatype='string' name='[OCCUPATION_GENERAL]' role='dimension' type='nominal' />
+      <column caption='Property Home Owner Or Renter' datatype='string' name='[PROPERTY_HOME_OWNER_OR_RENTER]' role='dimension' type='nominal' />
+      <column caption='Property Length Of Residence' datatype='string' name='[PROPERTY_LENGTH_OF_RESIDENCE]' role='dimension' type='nominal' />
+      <column aggregation='None' caption='Purchase Count (bin)' datatype='integer' name='[Purchase Count (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-1' formula='[purchase_count]' peg='0' size='53.2' />
+      </column>
+      <column caption='Travel Professional Sport Event' datatype='string' name='[TRAVEL_PROFESSIONAL_SPORT_EVENT]' role='dimension' type='nominal' />
+      <column caption='Travel Winter Sports' datatype='string' name='[TRAVEL_WINTER_SPORTS]' role='dimension' type='nominal' />
+      <column caption='Wealth Household Income' datatype='string' name='[WEALTH_HOUSEHOLD_INCOME]' role='dimension' type='nominal' />
+      <column caption='Wealth Household Income Single Num' datatype='integer' name='[WEALTH_HOUSEHOLD_INCOME_SINGLE_NUM]' role='dimension' type='ordinal' />
+      <column caption='Wealth Net Worth' datatype='string' name='[WEALTH_NET_WORTH]' role='dimension' type='nominal' />
+      <column caption='Wealth Net Worth Single Num' datatype='integer' name='[WEALTH_NET_WORTH_SINGLE_NUM]' role='dimension' type='ordinal' />
+      <_.fcp.ObjectModelTableType.true...column caption='mhk_customer_summary.csv' datatype='table' name='[__tableau_internal_object_id__].[mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA]' role='measure' type='quantitative' />
+      <column caption='Attendance Count' datatype='integer' name='[attendance_count]' role='measure' type='quantitative' />
+      <column caption='Purchase Count' datatype='integer' name='[purchase_count]' role='measure' type='quantitative' />
+      <column caption='Purchase Group' datatype='integer' name='[purchase_group]' role='measure' type='ordinal' />
+      <column-instance column='[Fanbase profile]' derivation='Attribute' name='[attr:Fanbase profile:nk]' pivot='key' type='nominal' />
+      <column-instance column='[WEALTH_NET_WORTH]' derivation='Attribute' name='[attr:WEALTH_NET_WORTH:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_3403313975207686144]' derivation='Avg' name='[avg:Calculation_3403313975207686144:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[purchase_count]' derivation='Avg' name='[avg:purchase_count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ESTIMATED_CAPACITY]' derivation='Sum' name='[sum:ESTIMATED_CAPACITY:qk]' pivot='key' type='quantitative' />
+      <drill-paths>
+        <drill-path name='Fan personal demographics'>
+          <field>[CENSUS_MEDIAN_HOME_VALUE]</field>
+          <field>[CENSUS_MEDIAN_HOUSEHOLD_INCOME]</field>
+          <field>[DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD_IN_RANGES]</field>
+          <field>[DEMOGRAPHIC_GENDER]</field>
+          <field>[DONOR_CHARITABLE_CAUSE]</field>
+          <field>[DONOR_POLITICAL_CAUSE]</field>
+          <field>[Fanbase profile]</field>
+          <field>[HEAD_OF_HOUSEHOLD_EDUCATION_LEVEL]</field>
+          <field>[HEAD_OF_HOUSEHOLD_OCCUPATION]</field>
+          <field>[HH_MARITAL_STATUS]</field>
+          <field>[WEALTH_NET_WORTH]</field>
+        </drill-path>
+        <drill-path name='School demographics'>
+          <field>[Ticketing Stm Tenure]</field>
+          <field>[ACTIVITY24MO_DONOR_OR_CONTRIBUTOR]</field>
+          <field>[Fan Journey Stage]</field>
+          <field>[DONOR_RELIGIOUS_CAUSE]</field>
+          <field>[Alumni]</field>
+          <field>[ATTENDANCE_PROPENSITY_NCAA]</field>
+        </drill-path>
+      </drill-paths>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:AdhocCluster:1:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>13</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>14</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>15</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>11</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:AdhocCluster:2:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{97975067-fd1c-4dad-a4b7-3a3d48e7c358}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:Calculation_3403313975207686144:qk]' />
+            <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:purchase_count:qk]' />
+            <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[sum:ESTIMATED_CAPACITY:qk]' />
+            <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[attr:Fanbase profile:nk]' />
+            <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[attr:WEALTH_NET_WORTH:nk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields />
+          <number-of-desired-clusters>0</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields>
+          <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[AdhocCluster:2]' />
+        </result-fields>
+      </analytic-model>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{d821c2ed-de68-4d11-b5ba-35a41bf142fb}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:Calculation_3403313975207686144:qk]' />
+            <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:purchase_count:qk]' />
+            <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[sum:ESTIMATED_CAPACITY:qk]' />
+            <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[attr:Fanbase profile:nk]' />
+            <field name='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[attr:WEALTH_NET_WORTH:nk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields />
+          <number-of-desired-clusters>0</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='mhk_customer_summary.csv' id='mhk_customer_summary.csv_A3EECDBFF30B4602AC9AAC4D0F7781BA'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[mhk_customer_summary.csv].[GRMID]' />
+                    <expression op='[combined providence append and fan factors.csv].[GRMCONTACTID]' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.11g3b0z0logfts1dntdmc0yw2sy5' name='mhk_customer_summary.csv' table='[mhk_customer_summary#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='string' name='GRMID' ordinal='0' />
+                    <column datatype='integer' name='purchase_count' ordinal='1' />
+                    <column datatype='integer' name='attendance_count' ordinal='2' />
+                    <column datatype='integer' name='purchase_group' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1tp8dab1dw3wmn1azslo91i0o8y2' name='combined providence append and fan factors.csv' table='[combined providence append and fan factors#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='string' name='Fan Journey Stage' ordinal='0' />
+                    <column datatype='string' name='Ticketing Stm Tenure' ordinal='1' />
+                    <column datatype='integer' name='Total Lifetime Ticket Value' ordinal='2' />
+                    <column datatype='real' name='Email Email Click Pct' ordinal='3' />
+                    <column datatype='real' name='Email Email Open Pct' ordinal='4' />
+                    <column datatype='string' name='Ticketing Resold Net Gain' ordinal='5' />
+                    <column datatype='string' name='Alumni' ordinal='6' />
+                    <column datatype='string' name='GRMCONTACTID' ordinal='7' />
+                    <column datatype='string' name='Fanbase profile' ordinal='8' />
+                    <column datatype='integer' name='RFM Score 041524' ordinal='9' />
+                    <column datatype='real' name='Fanatics Lifetime Value' ordinal='10' />
+                    <column datatype='integer' name='PTS Lifetime Value' ordinal='11' />
+                    <column datatype='integer' name='Vivid Lifetime' ordinal='12' />
+                    <column datatype='real' name='Priority Points 040124' ordinal='13' />
+                    <column datatype='boolean' name='ACTIVITY24MO_DONATION_BY_MAIL' ordinal='14' />
+                    <column datatype='boolean' name='ACTIVITY24MO_DONOR_OR_CONTRIBUTOR' ordinal='15' />
+                    <column datatype='string' name='ATTENDANCE_PROPENSITY_MLB' ordinal='16' />
+                    <column datatype='string' name='ATTENDANCE_PROPENSITY_NBA' ordinal='17' />
+                    <column datatype='string' name='ATTENDANCE_PROPENSITY_NCAA' ordinal='18' />
+                    <column datatype='string' name='ATTENDANCE_PROPENSITY_SPORTS' ordinal='19' />
+                    <column datatype='string' name='CENSUS_MEDIAN_HOME_VALUE' ordinal='20' />
+                    <column datatype='string' name='CENSUS_MEDIAN_HOUSEHOLD_INCOME' ordinal='21' />
+                    <column datatype='string' name='DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD' ordinal='22' />
+                    <column datatype='string' name='DEMOGRAPHIC_AGE_OF_HEAD_OF_HOUSEHOLD_IN_RANGES' ordinal='23' />
+                    <column datatype='string' name='DEMOGRAPHIC_AGE_OF_INDIVIDUAL' ordinal='24' />
+                    <column datatype='string' name='DEMOGRAPHIC_EDUCATION_LEVEL' ordinal='25' />
+                    <column datatype='string' name='DEMOGRAPHIC_GENDER' ordinal='26' />
+                    <column datatype='string' name='DEMOGRAPHIC_INDIVIDUAL_AGE' ordinal='27' />
+                    <column datatype='boolean' name='DONOR_ANIMAL_WELFARE' ordinal='28' />
+                    <column datatype='boolean' name='DONOR_ARTS_OR_CULTURE' ordinal='29' />
+                    <column datatype='boolean' name='DONOR_CHARITABLE_CAUSE' ordinal='30' />
+                    <column datatype='boolean' name='DONOR_CHILDRENS_CAUSE' ordinal='31' />
+                    <column datatype='boolean' name='DONOR_CONSERVATIVE_POLITICS' ordinal='32' />
+                    <column datatype='boolean' name='DONOR_ENVIRONMENT_AND_WILDLIFE' ordinal='33' />
+                    <column datatype='boolean' name='DONOR_HEALTH_CAUSE' ordinal='34' />
+                    <column datatype='boolean' name='DONOR_INTERNATIONAL_AID' ordinal='35' />
+                    <column datatype='boolean' name='DONOR_LIBERAL_POLITICS' ordinal='36' />
+                    <column datatype='boolean' name='DONOR_OTHER_CAUSE' ordinal='37' />
+                    <column datatype='boolean' name='DONOR_POLITICAL_CAUSE' ordinal='38' />
+                    <column datatype='boolean' name='DONOR_RELIGIOUS_CAUSE' ordinal='39' />
+                    <column datatype='boolean' name='DONOR_VETERANS_CAUSE' ordinal='40' />
+                    <column datatype='string' name='HEAD_OF_HOUSEHOLD_EDUCATION_LEVEL' ordinal='41' />
+                    <column datatype='string' name='HEAD_OF_HOUSEHOLD_OCCUPATION' ordinal='42' />
+                    <column datatype='string' name='HH_BUSINESS_OWNER' ordinal='43' />
+                    <column datatype='string' name='HH_CHILDREN_PRESENT' ordinal='44' />
+                    <column datatype='boolean' name='HH_CHILD_ELEMENTARY_AGE_5_TO_10' ordinal='45' />
+                    <column datatype='boolean' name='HH_CHILD_HIGH_SCHOOL_AGE_14_TO_17' ordinal='46' />
+                    <column datatype='boolean' name='HH_CHILD_IN_HOUSEHOLD_NEAR_HIGH_SCHOOL_GRADUATION' ordinal='47' />
+                    <column datatype='boolean' name='HH_CHILD_MIDDLE_SCHOOL_AGE_11_TO_13' ordinal='48' />
+                    <column datatype='boolean' name='HH_ENVIRONMENTALLY_FRIENDLY' ordinal='49' />
+                    <column datatype='boolean' name='HH_HEAVY_TRANSACTING_INDICATOR' ordinal='50' />
+                    <column datatype='string' name='HH_MARITAL_STATUS' ordinal='51' />
+                    <column datatype='string' name='HH_NEW_PARENT_INDICATORS_FULL' ordinal='52' />
+                    <column datatype='string' name='HH_NUMBER_OF_ADULTS_PRESENT' ordinal='53' />
+                    <column datatype='string' name='HH_NUMBER_OF_CHILDREN' ordinal='54' />
+                    <column datatype='string' name='HH_NUMBER_OF_GENERATIONS' ordinal='55' />
+                    <column datatype='boolean' name='HH_SENIOR_ADULT' ordinal='56' />
+                    <column datatype='boolean' name='HH_SINGLE_PARENT' ordinal='57' />
+                    <column datatype='boolean' name='HH_SMALL_HOME_OFFICE' ordinal='58' />
+                    <column datatype='boolean' name='HH_VETERAN' ordinal='59' />
+                    <column datatype='boolean' name='HH_WORKING_WOMAN' ordinal='60' />
+                    <column datatype='string' name='HH_YOUNG_ADULT' ordinal='61' />
+                    <column datatype='string' name='OCCUPATION_GENERAL' ordinal='62' />
+                    <column datatype='string' name='PROPERTY_HOME_OWNER_OR_RENTER' ordinal='63' />
+                    <column datatype='string' name='PROPERTY_LENGTH_OF_RESIDENCE' ordinal='64' />
+                    <column datatype='string' name='TRAVEL_PROFESSIONAL_SPORT_EVENT' ordinal='65' />
+                    <column datatype='string' name='TRAVEL_WINTER_SPORTS' ordinal='66' />
+                    <column datatype='string' name='WEALTH_HOUSEHOLD_INCOME' ordinal='67' />
+                    <column datatype='integer' name='WEALTH_HOUSEHOLD_INCOME_SINGLE_NUM' ordinal='68' />
+                    <column datatype='integer' name='WEALTH_NET_WORTH_SINGLE_NUM' ordinal='69' />
+                    <column datatype='string' name='WEALTH_NET_WORTH' ordinal='70' />
+                    <column datatype='integer' name='ESTIMATED_CAPACITY' ordinal='71' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='avg attendance estimated caoa'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mhk_customer_summary.csv+ (Multiple Connections)' name='federated.02f2xhx0ztkim71dwvhld0oxxh8g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.02f2xhx0ztkim71dwvhld0oxxh8g'>
+            <column caption='attendance %' datatype='real' name='[Calculation_3403313975207686144]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[attendance_count]/[purchase_count]*100' />
+            </column>
+            <column caption='Estimated Capacity' datatype='integer' name='[ESTIMATED_CAPACITY]' role='measure' type='quantitative' />
+            <column caption='Attendance Count' datatype='integer' name='[attendance_count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_3403313975207686144]' derivation='Avg' name='[avg:Calculation_3403313975207686144:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ESTIMATED_CAPACITY]' derivation='Avg' name='[avg:ESTIMATED_CAPACITY:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[purchase_count]' derivation='Avg' name='[avg:purchase_count:qk]' pivot='key' type='quantitative' />
+            <column caption='Purchase Count' datatype='integer' name='[purchase_count]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:purchase_count:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:ESTIMATED_CAPACITY:qk]</rows>
+        <cols>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:Calculation_3403313975207686144:qk]</cols>
+        <show-full-range>
+          <column>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[Purchase Count (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{92ADF532-10DE-457D-9BA9-A6F5700384BA}' />
+    </worksheet>
+    <worksheet name='cluster (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='18'>Men&apos;s Hockey Customers fit into two main demographic clusters: low ticket sales (7) but high scan rates (97%), and high ticket sales (16) but low scan rates (28%)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mhk_customer_summary.csv+ (Multiple Connections)' name='federated.02f2xhx0ztkim71dwvhld0oxxh8g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.02f2xhx0ztkim71dwvhld0oxxh8g'>
+            <column auto-hidden='true' caption='Clusters (1)' datatype='integer' hidden='true' is-adhoc-cluster='true' name='[AdhocCluster:2]' parent-model='[AnalyticModel:{97975067-fd1c-4dad-a4b7-3a3d48e7c358}]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='-1' value='Cluster Outliers' />
+                <alias key='0' value='Not Clustered' />
+                <alias key='1' value='Cluster 1' />
+                <alias key='2' value='Cluster 2' />
+                <alias key='3' value='Cluster 3' />
+                <alias key='4' value='Cluster 4' />
+                <alias key='5' value='Cluster 5' />
+                <alias key='6' value='Cluster 6' />
+                <alias key='7' value='Cluster 7' />
+                <alias key='8' value='Cluster 8' />
+                <alias key='9' value='Cluster 9' />
+                <alias key='10' value='Cluster 10' />
+                <alias key='11' value='Cluster 11' />
+                <alias key='12' value='Cluster 12' />
+                <alias key='13' value='Cluster 13' />
+                <alias key='14' value='Cluster 14' />
+                <alias key='15' value='Cluster 15' />
+                <alias key='16' value='Cluster 16' />
+                <alias key='17' value='Cluster 17' />
+                <alias key='18' value='Cluster 18' />
+                <alias key='19' value='Cluster 19' />
+                <alias key='20' value='Cluster 20' />
+                <alias key='21' value='Cluster 21' />
+                <alias key='22' value='Cluster 22' />
+                <alias key='23' value='Cluster 23' />
+                <alias key='24' value='Cluster 24' />
+                <alias key='25' value='Cluster 25' />
+                <alias key='26' value='Cluster 26' />
+                <alias key='27' value='Cluster 27' />
+                <alias key='28' value='Cluster 28' />
+                <alias key='29' value='Cluster 29' />
+                <alias key='30' value='Cluster 30' />
+                <alias key='31' value='Cluster 31' />
+                <alias key='32' value='Cluster 32' />
+                <alias key='33' value='Cluster 33' />
+                <alias key='34' value='Cluster 34' />
+                <alias key='35' value='Cluster 35' />
+                <alias key='36' value='Cluster 36' />
+                <alias key='37' value='Cluster 37' />
+                <alias key='38' value='Cluster 38' />
+                <alias key='39' value='Cluster 39' />
+                <alias key='40' value='Cluster 40' />
+                <alias key='41' value='Cluster 41' />
+                <alias key='42' value='Cluster 42' />
+                <alias key='43' value='Cluster 43' />
+                <alias key='44' value='Cluster 44' />
+                <alias key='45' value='Cluster 45' />
+                <alias key='46' value='Cluster 46' />
+                <alias key='47' value='Cluster 47' />
+                <alias key='48' value='Cluster 48' />
+                <alias key='49' value='Cluster 49' />
+                <alias key='50' value='Cluster 50' />
+              </aliases>
+            </column>
+            <column caption='attendance %' datatype='real' name='[Calculation_3403313975207686144]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[attendance_count]/[purchase_count]*100' />
+            </column>
+            <column caption='Estimated Capacity' datatype='integer' name='[ESTIMATED_CAPACITY]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Fanbase profile]' role='dimension' type='nominal' />
+            <column caption='Wealth Net Worth' datatype='string' name='[WEALTH_NET_WORTH]' role='dimension' type='nominal' />
+            <column caption='Attendance Count' datatype='integer' name='[attendance_count]' role='measure' type='quantitative' />
+            <column-instance column='[Fanbase profile]' derivation='Attribute' name='[attr:Fanbase profile:nk]' pivot='key' type='nominal' />
+            <column-instance column='[WEALTH_NET_WORTH]' derivation='Attribute' name='[attr:WEALTH_NET_WORTH:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3403313975207686144]' derivation='Avg' name='[avg:Calculation_3403313975207686144:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[purchase_count]' derivation='Avg' name='[avg:purchase_count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AdhocCluster:2]' derivation='None' is-adhoc-cluster='true' name='[none:AdhocCluster:2:ok]' pivot='key' type='ordinal' />
+            <column caption='Purchase Count' datatype='integer' name='[purchase_count]' role='measure' type='quantitative' />
+            <column-instance column='[ESTIMATED_CAPACITY]' derivation='Sum' name='[sum:ESTIMATED_CAPACITY:qk]' pivot='key' type='quantitative' />
+            <style>
+              <style-rule element='mark'>
+                <encoding attr='color' field='[none:AdhocCluster:2:ok]' type='palette'>
+                  <map to='#4e79a7'>
+                    <bucket>2</bucket>
+                  </map>
+                  <map to='#e15759'>
+                    <bucket>0</bucket>
+                  </map>
+                  <map to='#f28e2b'>
+                    <bucket>1</bucket>
+                  </map>
+                </encoding>
+              </style-rule>
+            </style>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:AdhocCluster:1:ok]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:AdhocCluster:1:ok]' />
+              <groupfilter function='member' level='[none:AdhocCluster:1:ok]' member='0' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:AdhocCluster:2:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:AdhocCluster:2:ok]' member='1' />
+              <groupfilter function='member' level='[none:AdhocCluster:2:ok]' member='2' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:AdhocCluster:2:ok]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:purchase_count:qk]' scope='cols' value='Number of Tickets Purchased' />
+            <format attr='title' class='0' field='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:Calculation_3403313975207686144:qk]' scope='rows' value='Scan Rate' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:AdhocCluster:2:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:Calculation_3403313975207686144:qk]</rows>
+        <cols>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:purchase_count:qk]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='452'>
+            <formatted-text>
+              <run bold='true' fontsize='14'>Number of Customers- 1189</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontsize='14'>Net Worth- 5,000-9,999</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontsize='14'>Fanbase Profile- College Grad Families</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontsize='14'>Estimated Capacity- 6082</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='73.903799140422052'>
+                  <node-reference>
+                    <axis>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:purchase_count:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='81.535326086956516'>
+                  <node-reference>
+                    <axis>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:Calculation_3403313975207686144:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='533' y='-17' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='422'>
+            <formatted-text>
+              <run bold='true' fontsize='14'>Number of Customers- 360</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontsize='14'>Net Worth- 2,000,000+</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontsize='14'>Fanbase Profile- Empty Nesters</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontsize='14'>Estimated Capacity- 6310</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='71.962982784158527'>
+                  <node-reference>
+                    <axis>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:purchase_count:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='32.663043478260875'>
+                  <node-reference>
+                    <axis>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:Calculation_3403313975207686144:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='531' y='-18' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{67FD3B6D-6F5E-45A2-8790-8345254A1FD2}' />
+    </worksheet>
+    <worksheet name='occupation'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='18'>Professional, Managerial, and White Collar Workers Attend Men&apos;s Hockey Games the most</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mhk_customer_summary.csv+ (Multiple Connections)' name='federated.02f2xhx0ztkim71dwvhld0oxxh8g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.02f2xhx0ztkim71dwvhld0oxxh8g'>
+            <column caption='attendance %' datatype='real' name='[Calculation_3403313975207686144]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[attendance_count]/[purchase_count]*100' />
+            </column>
+            <column caption='Estimated Capacity' datatype='integer' name='[ESTIMATED_CAPACITY]' role='measure' type='quantitative' />
+            <column caption='Head Of Household Occupation' datatype='string' name='[HEAD_OF_HOUSEHOLD_OCCUPATION]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Self Employed - Clerical/White Collar&quot;' value='Self Employed - Clerical' />
+                <alias key='&quot;Self Employed - Professional/Technical&quot;' value='Self Employed - Professional' />
+              </aliases>
+            </column>
+            <column caption='Attendance Count' datatype='integer' name='[attendance_count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_3403313975207686144]' derivation='Avg' name='[avg:Calculation_3403313975207686144:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ESTIMATED_CAPACITY]' derivation='Avg' name='[avg:ESTIMATED_CAPACITY:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[HEAD_OF_HOUSEHOLD_OCCUPATION]' derivation='None' name='[none:HEAD_OF_HOUSEHOLD_OCCUPATION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[purchase_group]' derivation='None' name='[none:purchase_group:ok]' pivot='key' type='ordinal' />
+            <column caption='Purchase Count' datatype='integer' name='[purchase_count]' role='measure' type='quantitative' />
+            <column caption='Purchase Group' datatype='integer' name='[purchase_group]' role='measure' type='ordinal' />
+            <column-instance column='[attendance_count]' derivation='Sum' name='[sum:attendance_count:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:HEAD_OF_HOUSEHOLD_OCCUPATION:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:HEAD_OF_HOUSEHOLD_OCCUPATION:nk]' />
+              <groupfilter function='member' level='[none:HEAD_OF_HOUSEHOLD_OCCUPATION:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:purchase_group:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:purchase_group:ok]' member='1' />
+              <groupfilter function='member' level='[none:purchase_group:ok]' member='2' />
+              <groupfilter function='member' level='[none:purchase_group:ok]' member='3' />
+              <groupfilter function='member' level='[none:purchase_group:ok]' member='4' />
+              <groupfilter function='member' level='[none:purchase_group:ok]' member='5' />
+              <groupfilter function='member' level='[none:purchase_group:ok]' member='6' />
+              <groupfilter function='member' level='[none:purchase_group:ok]' member='7' />
+              <groupfilter function='member' level='[none:purchase_group:ok]' member='8' />
+              <groupfilter function='member' level='[none:purchase_group:ok]' member='9' />
+              <groupfilter function='member' level='[none:purchase_group:ok]' member='10' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:HEAD_OF_HOUSEHOLD_OCCUPATION:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[sum:attendance_count:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:purchase_group:ok]</column>
+            <column>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:HEAD_OF_HOUSEHOLD_OCCUPATION:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[sum:attendance_count:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-width' value='0' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:HEAD_OF_HOUSEHOLD_OCCUPATION:nk]' value='216' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-pattern-only' value='dotted' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:ESTIMATED_CAPACITY:qk]' />
+              <lod column='[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[avg:Calculation_3403313975207686144:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#000000' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:HEAD_OF_HOUSEHOLD_OCCUPATION:nk]</rows>
+        <cols>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[sum:attendance_count:qk]</cols>
+      </table>
+      <simple-id uuid='{B4588273-A50A-4332-BE24-2BDB9B0E5F41}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='avg attendance estimated caoa'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:Purchase Count (bin):ok]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:purchase_group:ok]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[sum:purchase_group:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2A40596B-F9C2-4350-ACF4-D3E5FB4B3949}' />
+    </window>
+    <window class='worksheet' name='occupation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:ATTENDANCE_PROPENSITY_NCAA:nk]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:Alumni:nk]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:GRMCONTACTID:nk]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:HEAD_OF_HOUSEHOLD_EDUCATION_LEVEL:nk]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:HEAD_OF_HOUSEHOLD_OCCUPATION:nk]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:purchase_group:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CE01CCD5-0EFA-4E46-9812-9DF0126443D6}' />
+    </window>
+    <window class='worksheet' maximized='true' name='cluster (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:AdhocCluster:1:ok]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:AdhocCluster:2:ok]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:Fanbase profile:nk]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:HEAD_OF_HOUSEHOLD_OCCUPATION:nk]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:Ticketing Stm Tenure:nk]</field>
+            <field>[federated.02f2xhx0ztkim71dwvhld0oxxh8g].[none:WEALTH_NET_WORTH:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1E64F392-A2D0-4DC3-8CD0-D8E0120D4032}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='avg attendance estimated caoa' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='cluster (2)' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='occupation' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAgAElEQVR4nO3dSZMc53ng8X+ute97b+hGNwAKomiKsihKCtqmZDuk0Iy3mINlz4k3KfwB
+      fLAj7PDNV4UiFD44wgfPxZ7xOMamTa2ULEoixU0gVgK9d9e+V2VV7jmHBkGAABoktqquzt+l
+      u6qzqp6srqfe5cl8U/A8z8PnO6bESQfwKHmeh5/fvsPMfAL4fIeRJx3Ao/aHf/iHdDqdSYfh
+      m1LCLI8BXNelVCpRr9cnHYpvSt13F8h1DM6fO8fOfvXWP3geWxvX0C3njo8bDod3f07boNUd
+      0G/XuHTxEu+cu4Dxoef58Le5YxmMDeuW+8xRn/7I+Bh74zuu7rsL5DoWgUgKrd/hQrNCMp2h
+      1esTj0a4trWPh8hQ04lEFJDDYAyQw0kE16Jdr9DTDKLRMCNtSLG0SK2yRzqbZWh4KFicXpln
+      s6HRa5Spt3skEnHGhos17rK3u0syHqc7HJBJp/EEiU6rSalUorK/TyoZg3CWaFB5mO+VbwY9
+      wCDYo1beY27xBOF4CsU1KSwuYhgWi4uL1Cq7iAIEQmE67TbhUIh2u81oNELTLdIRhZ7usbI8
+      R3V3j+FoSK3ZxTY1JDV841V2d3bwBJFub8DiQolQLEkpG2dkwPLSPKPRkE6nTSo/z7DTRBu0
+      aPbGD+Gt8R0H9z0G8FwH3bQJBVV03SAQUNnf3aUwv4BlmoieTb09JB0LMDA8wrKL4alEQwqi
+      Z9MemqQTURRFwjIsGq02mUyaWqVM6cRJAoKLbrnIWJTrXeZLWSq1NtlsClkAywFVlbAsC1FS
+      aTcqxBJJOt0+6VQKWVVRJNEfA/gO5Q+CfcfazE+DPv/883S73UmH4ZtSM98CCIKAIAiTDsU3
+      pWa+BbBt208A313NfAIsLCz4YwDfXc30sUA+373cPQE8j6tXr/L+COHDFVhLH2HY7vVtXYba
+      6Mbv2mh029Npmnbrdre8lMvu9iabO/s4ps5761sfe0f0kYbtHARraH4l2PfR3LUL5LoGer/N
+      fmvIqLlNZ2iRS9RodgZEAhKpbBYEiVqrTy6TxrENNq42yRcKnL90jbUTCxiCTEx26YwsuvUy
+      a2c+gW5abG9eQwklcMZdLCHA2kIGRJVKpUpYtBhoI/a21+kbEMBEG9ssLJXY3dmnkMvRaNUJ
+      xzLogy6JRJxKo0M+kyCeTLO7tUk6nUDwK8G+j+CuLUBtZxsnEKdZ2cYTFRLRIKISJJGIs1xK
+      MxiOMQyLheU1bGOErpuEQ0GGY4u5UglJEFhZWaTeaLJfrpDJFcgkY2iDHnIwjm2OCUUTxCNB
+      mt0R2WSYbCLMdnNENACNepvyfhlJDVFMxyhX6wy7LfaqLUrFHO1GhbZmIHgO2dIikmfSqNUZ
+      ax1afiXY9xHddRp0PB4TCoUYj8foowG2ECAWDuB5HqosYNoegiAgKSqOZeJ5Ht12k0S2yKjX
+      Qg3FiMYidOpVXDlEPCgy0B0i4RCjfgc1mkQRwXNMGh2NhVIO23ExLBtZFND6XQQ1QiSkIglg
+      2RbdvkZEFXn9l2/yxDOfRzYHxNNZJFlGcG08z6PV7pJKJZGUAIok+IUw36Fmvg7gJ4DvMDOf
+      AN/61rcOBuA+3x3MfAL4lWDfYWa+EPajH/0Iy7LuvaFvpj377LOkUqnb7p/5FsAfA/gAXn31
+      Vb7whS/cdv/EK8Ge5zGzGeibKp7n4TjO+zcOzlt5WE8+7rd49/xF6o0K5VoX27ZxPQ/XcRgP
+      +1iOd3Cf62LbNp3qDgPDY2v9CvuVBuffeYvhsMfGtau0BwauYzMYalSr1RuP8TyPYbfB+QsX
+      6Q5GB/fZY3b26uzs7OA4No7r4roujus+rF3zzYhmZZv/9U//CoDRr/Cv//69hzcG2C03+OST
+      Z7HHLbZ2mrz92n9RXDqBOR6RS0QRwzEMyyYRFHnjrXOcPXuGZGiEEk4z7jeRZJnNjR2SyQhb
+      m1dJRMIYjkejvMuw2+TS1Q1+7XO/idlp8cTZswwbe1zeHRBURRwhAvaYC+/8kuZYIhOGueUz
+      ZJKxh7V7vhmQm1tmsbgFwLhV5hPP/fbDawHy6Rjvnr9Ipz9CFEQKc4sszhWZWzxBNKQiSRKO
+      49Du9FkoZTEtl2ajSTafwxwPyJSWaHcHJMIqJ5aXkQVQ1CCJWAhBVFhZPU06FiadiHDxwkX6
+      IwPbthFFCUEQEEUXwxIJB2SSmQK5dOJh7ZpvRpS3r7Kzs8PVS+cZRpfZefO7kxwEe9RqdQqF
+      wiN7BX8Q7HvfzYNgTdMIRyIITHQaVHikH36f724ikciN32d+GvTtt9/Gtu1Jh+KbsLNnzxKL
+      3T4mnPkE8CvBvsPMfCX4Bz/4AaZpTjqMqTM3N8fTTz896TAmbuZbAH8QfGd/8id/wj/+4z9O
+      OoyJe0jToN6NfvaH+9ue5+FeL07d6X7PczEMA9f9cB56WJZ11zX+P/x8tz63izu7ef0QeYxH
+      IwzTxDINDNPCdWx04/icTvqQukAer/74xzz3m7/J97/3fX73hefZr3dZnMty7b0rBGIZ4tE4
+      htYhHE/RbDQoFTJU2yPyEYdLOz0iYYW5bAqUIJ1Wi0wixI9efZMvfP6z2K5IWHIYORIqJo4c
+      RnBMArLA0BSIhySanT6lQpa9cp1sVGEoximlI/cO/Rhz9Q7/9L9f5rnnv8jFN17D9BSyqSDa
+      QOOzX/oaxURw0iE+cg9tDDA3l2P90iUSmRJXLl/Gsh06vT6nTizSaLWpV3uokQwhY8ig18a0
+      HQKhKO9/00eicTa3q6RiKplinlq5wRNPPsXWtSsghUkkQsiBGINRl0AMdK2P67qEZNhsiWST
+      QWq1Jr1mGd1Ik8zFH9auzS45ylNnT3Ll0iVEAQRBIBaL0W81afU0PwE+OoF4ukCz0WR5Po2C
+      TUczSUZD7OyWSWbSBEMxuq0GXSeEEgwRDocIBANIqsqZM1kyCYWgHCasOGxv71MslTBsDzWb
+      xZXChFXojUxikQgj0yQajWLpQ0amQDadIBqS6XQGBEJhIuEwQXXmx/cPzLZ1up0BmWwOowuq
+      p5BOp+gMTNbm0pMO77HwB8HHlD8IPjDxw6F9vkma+X7Cyy+/7FeC7yCdPh5dnHuZ+S6QXwn2
+      HWbmW4C/+qu/OvTCfLPsj/7oj/jiF7846TCm2swnwHe+851jOwheXV31E+AeHjgBHNvG8TxU
+      5eZ1OD0s00KSFUTxo3c/RpqGKIkHjxMEJEm6fSPPwzRNJEVBEkXwPBzPA8+78/bHnKX3+dnP
+      3mTtyafpVTYI55YQxy0GTpCzp5c57p3DB0oAz7U5f/5dcsUFokEJy4Vuu0M+n+aVV35KIpXm
+      1JkzWKM+qVyJbrOCIKkowSiSo2FLYUKSQ3dosDiXo1reo6uZOK5LPBJkfn4eVRZxPIFqtcbi
+      0gk6tR1amk2pWKDTrFMsZtku98HWSMXCCME4IdnDcARSCf+UyPrmRaqax9NhFXVukTfffhvH
+      tBA8jzOnl2e/C3APD7T/jj0mHM8xV8xx7p23WV1ZYjjsY7hw+hOfBNeikIpxvryHGohgIqB1
+      BkQjBq5lUG3vk0/HCUkK1WaDdDZHvb2OEgwBsL+/Ty4eYH2vhSQLqLE048GY1dNn6OxtEE0X
+      2N7aBDUFeHS6PVqDGrGQzBNnn3oY78+Rl199hj9Y6vGjn72Jis6zz32On//4J7juwZU25WPe
+      aD5QAkhKBMHaZWu3TKE0h+c4yIEgkXAIWRSRXINKq0s4FMB2XRLxOEE5hCxDr60TjUZJJFOo
+      QHM8pphKEwoGkINBotEQgmOyW2tTLBboD4ckIiHSgQLvXbxEJpOivrtFNpfHcSVwXQadPrFo
+      jHw2iSKLhx4wd1yMB23e/NVFPnn2NJfevcDuXp2l+TxDJ0DwmH/4YUqmQT3XYaDpxGMP9+C1
+      414J/va3v803v/nNSYcx1aaiCyiI0kP/8L8vHo9jHKPDe2+mquqkQ5h6U9ECPCp+Icx3L/6x
+      QL5jbSq6QI/Sl7/8Zdrt9qTDeKz+/M//nD/+4z+edBhHwswnwIULF47dILjZbE46hCNjgl0g
+      j3ajys5+9cY9Y22AfYeZy1arRWVvm1qzc/sfAVyb4Uh/RHEeTaNehZde+i779TY/f+VlWkOb
+      c2/+gh/8+Of4k8MfmGAL4LG1s8/q6TN0WzUqjT4R2SWSK1IvV0ink7S7Q9ZWFul3W7QHJk+c
+      zlHe2UT3VAKCieVAulBE77VAjVDd3SKeztBpNcnNnSAZnf1T+u5G67QwXBfDtElFVXpjhyfO
+      PknllZ/h4A/+3jfB90HgiTOnuHr5Cu1en25jj6EJ5Z1tLNdhrBu4jkmtWiVdWmbtRJErV99j
+      c2sXXR+j6RZLiyU2Lr6L4wk0axXESBZ31Gag24xHx/tSqUo0y68/tcb6tU0s02SoDfjh977H
+      J5/5zOz3ez+GiX4RtJoNMoUi8UiETGGeQiHPyZMnCcgKsWgURVEZWy6xgECz2aJYWuTkyRNE
+      o1GKxSKiHCRfLJHPZyktLCFbPZRYnnhIJRoNT3LXJi6eTKGNbJ7//K8hxooE3SGnzpyh12r5
+      XaCbTHkdwMM0rfsu6BzXSvC3vvUt/uzP/mzSYRwJU94aCg9czfza175Gr9d7SPEcDaurq5MO
+      4ciY8hbgwfiVYN+9+JMBvmNtyrtAD+6FF16g1WpNOoz7EgqFeP311ycdxkyb+S7QUR4Eh8Nh
+      NE2bdBgzbSq6QN1mDcOBWq12X48/qt/wH5VjjvjP7/2I6vZ7/Od3f0C32+Ll//gPduvHa3D/
+      KExFF2jQbrBV72KOx/RaDXRXIqR6dNp9AuEgqUSaarVMNp+j1+7hCCKpTBZX62CIYWRXYzAy
+      GHWq6IQICQap0jL59AwskOt5vP3GG1iuy7XdOs//+hr/9/98n6/+zz/g0hu/YjH/7KQjPNKm
+      ogUQJYW1U2dIRANYroiCi6CGyadSlObztOp1lHAUQRBYXJgnmSshWQPaQ51Ou4UxHmM7Fu3O
+      gGgkTDCaoJhNTnq3HgrPc9HGY9YvX2CkaVzb2KEwl+Ha5fdwpcCkwzvypmIMYJkGkhLAMg1c
+      28B0ZUIBGTwPURIBgXarTSKVRBJFXA/wXLRBHyUUQZWlg6vDWwaWJxEOqqiqOlNjAE3TCKoS
+      O+Umy0tz7GxtMXdiBeVjLDvju91UJMCjMksJ4Hs0pmIM8Cj93u/93pGtBAcCfhfnUZv5FsCv
+      BPsOM/MtQKPRuOuF9iYpGo3ecsVy32TMfAswrWOAv/mbv+Ev/uIvJh3GsTcV06A+36Q8YBfI
+      48rF84QSOdKJKNFo9NCtTV0DOXSw4K2p0xkaxFSHyxtlMrkCC6XcBxu7Nu9d3WBl7RSKdHsf
+      fjgc3vX1jGGXMUHi4eleGErvN3n1l+8QjOVg3KBnKSxlQlxZr/Df/sfv4w+BH70HToBut0c4
+      mafRaLC3vYFmCawt5rhweZ254hx9QyMRjdLtjkjHFILJAptXLjC3eALTEQhGXILRFIN+k7f2
+      tkhnMgxGGpGAym69i22eo6+7JMIiwXieUbtMPL+ErQ+p7G0xtgRCAYnRWGdhYYGrV96jNFdE
+      juamPgECsTQBd4QryiyVikiawNJiiv22jnLvh/seggfuAiUzeRbnCpimSTASJ5OMUW80EV2d
+      3tBm5eQqo16LSDKD6Fk063VEWaTTG1x/Bg/DMDh5coVUtoQiuKTTSTxBZmFhnuGgTzIeJ55I
+      0mo2SSQStJpNTNPEcjwCkocjBVko5aiVq0iCTW9wNFaIGLZqGFIEU2vw8vd/iiwJvPTSfxJU
+      FJxJB3dMPOAg+INTFk3TvDHd6DkWw7FBOBRBUWVcx2E46BMKR5AkkX5/SDQWQRAkZNHD8SQU
+      WcCybGRJpNXukk4nsW0XzzHRDIegDDYyomuCHESVRTzHQrchHFQRBXAch4E2IhqJIMoKkoA/
+      CPYd6gG7QB+csnjLqYuKQjr4wUnpkiiSSmdu3M5kbr1CoXjjYQcNfzabuf6cEqAQCN289c0n
+      u6u39JMlWSET+GApFH95dN+9zHwd4G//9m/R9enrEn32s5+ddAg+jkEdwK8E+w4z8y3Av/zL
+      v0xVC/DUU0/x5JNPTjoM33UznwDf+MY3pmoQ/Nd//dd+AkwRvxI8AZ7rUKtWMC2HQa/D2LAY
+      9ruUq41Jh3bsHIkWoFvbYb3SJ5lKsVBI4wkS5f1dioUCticQkCUEScIwTKKREMNWla4bYT47
+      nZdJNUd9qrUKb5+/iD3SkUNhrEGNwslPMVfM3fsJfA/NkUgA17YwTAtJ9HjtZ6/iBWKEFcjE
+      wzSHBo1ah2jQo1JrMrewSCwkYQWmd2VoNZJk1GkQDMsEY2s4dpPVs1/gtVd/ifb0J/GPEX18
+      jkQCCLLK4nwRwzRJptIkcnMY/QaG5SBJEvOLiwhGFykQJRpSGAx6hEPT27sbtqqMXIV0fIFh
+      fZNgeoFqeQ81mWZ603Y2HYkESBUWSd24deL6z+KHtsre9rhpLYTFsiW+/KXS9Vunb9z/9GTC
+      Odam92vS53sMZr4QtrW1heNMz6FlmUyGdDp97w19j8XMJ4BfCfYd5kiMAR7EP//zP09NJbhY
+      LPI7v/M7kw7Dd5OZbwGm6XDoF154gR/+8IeTDsN3k5lvAaaPR6/TPjg1VLDRHYF4WKXW6lEq
+      5vE7a4/XI0uAyuYmyZUVVMtkZNhEQir9wcF5vMOhRjggUe2MyIQcLqzXSaYSLM8X8UQRfawT
+      UgVee/NdPv3pTyMIArLoYbsCEg6uKGPqY8KhAJYjoCoi47FBJBJiMBwhO2OGQpR8InTvQB8z
+      z4PdnR3WdyuEZBhpJrFkkJgKDe2z/Npq5t5P4ntoHlkC2KaJB1w49xb19pC5xSWC6LRDaXbX
+      L1NcWkVRg3iuje16CKLDr955l0w6hhgIUB3rBKIJzr/9Gpolk0uFCCcLDJt7JIsrGFoXxzIA
+      AQcRVYZYLMHlixeYW1ohlpneq0Saoz6fePJpuvvvsbe+R6xwika3y9rSzPZGp9YjSwBR9Ni4
+      eo1AOMFSPIcqeXRbQwRLIZnNI+AiyxKCKHBy7RTFtMquHCGs2JQbHdLpDEpExFQccuEkYcVj
+      v9mlmM3S7HYOTnh3THQb4sk4yYhCo969fjaZgHSHlSSmgqeztVNjMZwjHoux9swzFOMSO7pF
+      NOKvA/G4PbZBcK9VZ7/W5OSpJwgqj6f+5g+Cfffy2AbBiUyeRCb/uF7O5/tIZn4W6PXXX5+a
+      Y4KCQf9Qt2kz83UAvxLsO8zMtwDPPvsszWbzI2374osv8pd/+ZePOCLfNJn5BNjZ2fnIg+B2
+      u/2Io/FNm6lPAMsYsbW9R3FhiaAioyg3h+wwHBpEo7fO+VuWdWORrY9r3Gvy09feYH7lNN3K
+      Lo2BwX//2u/6x43PqKlPgFZ1H4JRPL3Dj1/f5MzqCdLJMJpu0WxUEcQosmgSSaboVOsEYzF2
+      tzb41DPPkop9/GJYvbxLIr/IlUuX+P2v/AavvnHV//DPsKn/32ZKSyQVi0pTY2F+HmM0ZDTs
+      s79fYW75JLbWodYaYBojIvEskgDF0hzp+P2dWTu/cgq9XSaWzPGrt37Fpz791EPeI980mfoW
+      wDZ1OkOTxaUTtKplovEMzVaXtbVV6pUqC6uniXdqxOJpVEkBXMzxkE5fI3kfLYCkBlk780ny
+      pRK2aRAMTv1b5HsAU//fDUUTnD6VACC8vAxAKn1w/m8sunZwO/mh5U+uXzjjfub/BVFmbn4O
+      ANmft595U58AD+rrX/86/X7/I2377LPPPuJofNPGL4T5jrWpHwT7fI/SzHeBPvOZz9yzEvx3
+      f/d3fOUrX3lMEfmmycwnwP7+/j0rwePx+DFF45s2E0kASx/w3vou2cIchWwSgEqlgmuNCScL
+      6P0mfc1gYXmFSOD2im6lUqFUKt12/wcvMKKheWTiH/2UyPL2NS5dukgsv0K7Uaa4uMrTZ9c+
+      9r75jpaJJIBr2ximjSLBz3/6E0KpIiHRplqr8tQzBbThEAQVrVvl8k4dWxBIpxMMWl2UaAxV
+      9Bj1Owx0i3A4SiKi0ukPqVZqLC0vMR50CGRWPlYCzJ1Yo1qpUsoG2dzSUVr+cUHHwUQGwYKk
+      kM+n2dnawBUV0skEiBLF0jypeARBVkilEgiCwNLSIpn8HIpoo6hBRA4mrSzHJaiIpJNRNssd
+      RMckmy/gWBbxeOxjr67gWhoDO4A31sgW59C1wb0f5DvyJtICKIEwsahNsTiHpY8QZBUp/8Fy
+      gYuLi2gjnUg0dXCFSQ8gwaZZYWllCREPARfddHGNPnNzJRYKKQbaiFgkgqZphCKHX7X+NqLK
+      5z/3DKosotRrxFK3L7brmz0TSQBBFEkkDvr+8h0+qGoghBr4cPclxKnTJ2+5J6oAkRDx67cT
+      8YPfYtd/fpxKsCgpqNLB77nCh1ee9s2qmZ8F+tM//VMGg8O7M8vXD7HwHT9+Jdh3rM18C7Cx
+      sXHo8uirq6tIkvQYI/JNk5lvAe61LlCr1fLX6z/G/GOBfMfakesCmeMBVzd2CEWTpBMRkrEQ
+      ja5BLhO/94Pv4le//BltQyQThL1ymdVnfoszC36rcBwcuQSo7ZdZPn2W/fXLnN+5ytqpNba2
+      qjSaCcadGroYIRlwycyvkk9/tKS4eu0qgUAUsllCMZXNqzt+AhwTR64LFImG2NvZZmy55LM5
+      ggGV4vwS4YCI7QoU81nC8TTF68cYfRTLy8sIksrC/DzmGD711KlHuAe+aXL0BsGeh6YNUYNh
+      RFxM2zlYAsXzcB0L2xNRZQlZlv1BsO+ejlwXCEEgEn3/HGCJkHzT0aKyjDqRoHxH1dFLgI/p
+      O9/5DoZh3PXvkcj9LZ/imw1Hrwv0MfiVYN+9zHwL8A//8A83zvh68sknef755ycckW+azHwL
+      cPMg+Jvf/Cbf/va3JxyVb5ocuWnQB+W5DhvX3mMwMjB1DU23Jh2Sb4Luqwtk6z3eubBJaWGB
+      REhGUEJU9ncZdurES6sEzD49y2V+fgFHHyPKMrIaxLPGeFKARq3CicV5ekOdaCSEosjYtk2/
+      PySdSdGpl+mbCiuLBQAMrcelazuU5gsMezr5bAwpEEH0bAxDR1AiOPqAcDRKrz8kLNoMhCiF
+      5O1LIzqWgSAK/PgnrzKndBgXn+OLn5x/sHfRd2TdVwJISphIQMQYj3jr4lXUWIZULISohpnP
+      p6nvdAEB2+xTrw3QTJ14NIRtmrgIKLLExsYGQVWiUnGJhFR6/T7D/oB4Mk06n8Z1XLR+h6EJ
+      wrjF0tonSEccOrUmb761QTiRQXbHLC2UqFfrBMNxHKvNe5cvkSktEM/ceXZHDoTpNqoEIxHO
+      np7n7bY/QD7O7isBPMfCkxRMyyKVTpPMlbCNEaqqElAVZEUBx8JDIpvNEjJ1FNGh2mkTjKcJ
+      BBREz6I3GLO8usaFC5dYXchRD4RIxyO0Wm0i8RyReIoIYI1lLl69hDVXIBAMk0olyRaL4JhE
+      QioRS6Tf6+AFFBLJJJIoI8t37t3pgzZdzSKVy3Lu4gZ1K4pzZg7p2HUGffBYB8EurVaXTObW
+      qqvWbzO0JAqZxMN/RX8Q7LuHxzgNKt724QeIxNP4pSjfpMz8NGi73eb9XQwGg8RisXs8ynec
+      zHwC+JVg32FmvhL893//9zcqwS+++CLh8Me/aoxvds18C3DzILhWq5HP5ycclW+aTP3kn2Ob
+      aCMdz7XpDzR0XccwDHRdv6/n07Ue1zZ28DyXzWtXGZt3XzHCN/umvgs01jqcf6/OqcUkV8td
+      1pZKtFotMpkMV8+/Tbi4StDVEINxFM9gbLrkikV0TSMev33A22i2qW5cYXfnKkPdI1lcIqT6
+      y6IcV1PfAoBAWBGo9U1SEZVWqwUcnMmVSKaZK6YZDDS2t7epNzsUc0nWL19k7Nx54OtZY6TU
+      HII+5uwTy5w7d/Fx7oxvykx9C6CoIZaW5umN9Nu+qYMy1Kt1REkimUySSydQglEc2yGXigG3
+      D2/298sYXoCzn36ad965wNlnnntMe+KbRjM3CHYsnc5AJ5tO+oNg3z1NfQvwcUlKkGzav76v
+      76OZuRbgZq7r0u12b9xOJpOI4hEY9vgem5lPAL8S7DvMzH8dvvjii7e0Aj7fzWY+AV566aVD
+      l0XxHW+3JIA51qjUGjcmD21Dx3Y9mo0GrudRq+xTa9z56omue3Dlx8OYpnnLbW3QpdH+4NvZ
+      NHScO3TI+v0+nVaD3kC78xO7DmPDvPPfrht06rx76RqOOeb1N94+dFvf8XHLLNCly5dZWFxB
+      G/YolxvEZAcjHOG98zv89pdS9IZjlpayVPa26WsGCCK5bIJWs0OhlKLZcvDMHolsDkUO4Dom
+      42EPMRhHsDQ295s899lPX381lytX1lleXaXXblDvaAQxiBUXqO+XKeSzVBttVleWaNbKdDSH
+      tZVF6pVdDAKEJQdNt8kWihiDNo4UorG/QySZpduqk184ccs1hi1XpFbe4eR8lkaz8TjfY98U
+      uyUBzpw5zaXzF7Eklagq0Ddl0sUoJ1dWEYFuq04oEsMyHTzXIRVUqPSGnFossbm7gz00iS+d
+      ptXYRcBDEmWq9TrprIEiBw4uiu06bO/sMr90glNrJ7hybZN8LkG7ukssXaS7uYmHR7PVxrZt
+      WvU6qdIysUGTzd0dxt0u0XSOITanVpe5fOUCyWSK/rBFMJHHHtTpjgyUTp9IMXNj39KZLLIk
+      EokniQT9BRR9B25JgHarSSCWZCmboN7uk0nGCcoBhIQEgkg8FsN1XZLJJLZtE5JlpFad9a09
+      FpaWMMY2zfoWyfwcw8YuuaU18BwCsRT2qMfYEkGUOLG8DLi0mh1iySSKJBJNpEinUgSDMuVK
+      nVgshtlu09UM1vIi63sDkok0qXAAT4kQjwSRAxHC4TCFYh51YDBo1RCSSUJai1j01sOe1y+/
+      i23brK+vY9s2W+UGy3O5x/hW+6bRA0+Djkaj24+x91xqjRaF/IN+wDxGo/F9H0lImSAAAAWW
+      SURBVMP/fiX43LlzFAqFB4zFN4seeBbojh9OQXwIH34A4YFPYPnUpz6FLM9cwdv3kPiFMN+x
+      NvN1AJ/vMDOfAKdOnTr0CjG+423mE2AwGDDDvTzfA5raBHAsg8uXLlKpH1See73eXbc1dR33
+      Hp/x/c0r/Oinr9PcW+ff/+3f2G/fparsO1amdnrEMXTGlkNOlVi/conW0GC+mCMkg+4IDDSd
+      VDxIozXEHNSJz69hD1oIgSiSpRHNzJG76TKpxaU1rm7/F5s7Fr/91d/gjdfWmf/CUxPcQ980
+      mNoWACCZzhIPyzhSmGQswmAwoNdtUWsPWD6xSKvZpFbeIZzMUsxEceUojjEGOUD+Q5dJrexu
+      cOXKFUTR4yc/fJVINjuhvfJNk6mdBnVti42NdSLJPLI7xhICRFWPzkCnkM9RrTWIhRVGpkcu
+      HafV01CxEINxQqpEOBy+pRCWTMQxLZtQOIxpGIRCIX961De9CfAw+JVg371MdRfoYfjGN77h
+      L4fou6uZbwH8SrDvMDPfAvh8h5n5BPjqV7866RB8U2zmE+B+F9H1HQ+3JYBrapx79wLlWuvG
+      fXt7e+xvb9Ds9KnsbXPlysF1du9kb2/v8Fd0TGrNzo2b436Dt955l83d8ocCsbh48RLWnU4S
+      BobD4V1fYtxv0eqPP7jDs3jley/zw//6xR0WS/QdZ3esBNuWhSgKvPK9l5DiJfLJEI1qmSee
+      yl6/2ISIPW7y83M1XNcklUljDHp4SohIUGH9ykWGIx0pECGfClNtdtnb2eHk6iksa4wayxEL
+      iIxtgYBr4Hgi+njA6z/7BelsirFhoMoyldaAwS9+QmcEhXSAaGaRXnWD7OIZrFEPS9cwbFBV
+      GcMwWJif581fvsHpTzxBMKECgYMdcnTaA4Ph/jrm88+9f6/Pd3sCeJ5ALB6lVisTjiYpLswx
+      HnbJFefJpuL0WxVUVQE8Fk+sMBp1USUXYyggSQeL17qehywJFEoFLl+6ylIhhrSySlARQFAR
+      gGA4igro3QG5QomlYpRtJUJIMrFch0AwzMJCHL1TYa2UJ6x4bFVqLBaKVGpVEpEAngeiAEow
+      SjGXolqtUyhkGI1NgjdfdFKOsbKQZqcRQvnwDvuOtdumQT3Pw7YtJEnBcx08QUC8Po0oiiKu
+      62DbDpIsH0wveh7gUt6vUZovIQACYLsuptajrTkslHLYto0sH1wRXpJkRFG48XoAggCue/Dz
+      /W09D/BcHM9DFMBDQPA8EEQEAfA8XEC8PtXpeR6O4yBJ0o3bX/rSl3jllVcwDR1RVpH9CwL7
+      bnJbCyAIAopyfdUE8fYekihKqDcvUy4IgMjC4vwt2ymiiJLIELn+Tawoyi0/b369D5771m0P
+      /iQdOlK/+W+CINyy9ufNua0G/AVzfbeb+a/Dr3/965MOwTfF/Eqw71ib+Rag3+9POgTfFJv5
+      BHjrrbcmHYJvis18Avh8h5naBKjvbvDuxYtUGh+sHr23t3dLBXisDe+4mvSHrZ9/nf/30vep
+      d/3zgH23mtpzgvXxCFEOoA+7fPeNV0kUl0mGZUajEZ6l0+6OyOTSqAGJYW8AokJxaZ7m9j77
+      jQa//rnniIUOpnPT+TlC5RpbO3XyyZUJ75lvmkxtCyCKCgFFBlyS2QKLc0XgYG7f9TzwvIPf
+      XQ9JEhFFgb3tLXRXopAOU29+sIqEoRt4nkg87p8Y47vV1LYA86ungYMP/NLSCQRBoJRPA1Dd
+      28b0FNZOn0YEHNdFul6lFgQRz3URJelGIay4tEpxaXVSu+KbYlObAO/P3d9pDr+0uExp8YPb
+      8vVjkCTp+u5crwbPcInD95DMfCGs0+mQyWTuvbHvWJr5BPArwb7DTO0g+GHZ3t6edAi+KTbz
+      CbC5uTnpEHxTbOYT4H31yj665Uw6DN+U+f9N6z9s/zx7xAAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
