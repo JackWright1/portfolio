@@ -13,7 +13,7 @@
 - Cleaned and manipulated complex datasets using Excel and R, and built Tableau Dashboards to showcase customer segmentation, and attendance trends
 - Presented actionable insights to our clients and gave our business recommendations to support PC Athletics business-driven decision making
 
-#### Consulting Military Hiring Predictive Analysis
+#### Military Hiring Predictive Analysis
 - Cleaned and merged three large datasets using Excel and R to analyze demographic, military, and hiring variables
 - Clustered demographic and military variables to reveal patterns in the data and segment the people being analyzed for data visualizations in Tableau
 - Used predictive regression modeling in R to predict post-military hires based on available data and compiled findings in a technical report
